@@ -21,15 +21,15 @@ const NOTION_API_KEY = process.env.NOTION_API_KEY;
 const NOTION_DATABASE_ID = process.env.NOTION_DATABASE_ID;
 
 const CLOSE_API_KEY = process.env.CLOSE_API_KEY;
-const CLOSE_LEAD_STATUS_ID = "stat_Kgn10JAcTEoJzDJMR1BnbRhTzaHXyBJVolsPYcOqJOp"; // "Potential"
+const CLOSE_LEAD_STATUS_ID = "stat_s8lalqUEWixcmnxyEntlwyVhefetegX7NprQF4CfdS5"; // "Potential"
 const CLOSE_FIELDS = {
-  propertyType: "cf_MvPbcmMqydaR3ha4BSccE3GNx7x5lWJMjMc3JWociI7",
-  projectType: "cf_CbDd9zwKkZNp6r0raJOl0Z33yKItWEAe1dlMIFw0KeJ",
-  budget: "cf_qO6N4g7FGQ3JFSZeD6FxGAguOBkWuOrgjtubOxQqtTR",
-  timeline: "cf_wYtVJr1Foxxfxa42oQmCyMUXTBJ7rOj6an0PbgVMtG9",
-  renderings: "cf_ejAx6KPxFWcUzOIBrEYaWGvuXGrt2F0bBuIA2C6IYpw",
-  referralSource: "cf_ZsYU5xIXizX9uXLfPWfn3vCDgALeCpuhmLaiVXxHlMX",
-  region: "cf_pkn9c93CmiNxaUlaTocENha4xAk560tFh8rDZleeCoC",
+  propertyType: "cf_ZlcymV713bS1VSy6NhUuaNfhgIEkQHOtUNGx6HEZM3g",
+  projectType: "cf_IuXp9XaYsfibdjN5wdK9TBOSni127xZfeYTmESg2aFp",
+  budget: "cf_6ewgxmLxATakRmOXXkmiGAlsVwVFbj3WQsEJJarUHAk",
+  timeline: "cf_spfNpoyMWagkvXjGKHIEIF9AHl9UrIs3m4m6cenNLAL",
+  renderings: "cf_DJgkkhHM0lPunJXdg0IbFo0SbETaIOx5XQ3DLfEsp3d",
+  referralSource: "cf_9vJsVlOPypwtGVojm18nmWtCh1Tcj1GIqlmGe4nFHER",
+  region: "cf_EV2b6tNcdu8xmkcNRx1ZD91Q5EOJzBuT5bmYQ8um0oy",
 };
 
 type LeadData = {
