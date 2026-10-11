@@ -76,8 +76,14 @@ export default function Home() {
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
+              href="https://calculator.innovadesignstudio.ca/"
+              className="rounded-none bg-accent px-8 py-4 text-sm font-bold tracking-wide text-white shadow-lg hover:opacity-90"
+            >
+              See what your home will cost →
+            </a>
+            <a
               href="#contact-form"
-              className="rounded-none bg-accent px-8 py-4 text-sm font-bold tracking-wide text-white hover:opacity-90"
+              className="rounded-none border border-white px-8 py-4 text-sm font-bold tracking-wide text-white hover:bg-white/10"
             >
               Book a free consult
             </a>
