@@ -190,13 +190,32 @@ async function createCloseLead(data: LeadData) {
   }
 }
 
+// Also drop the lead into the Innova client portal's Submissions inbox. Server to server, so the secret stays private.
+// Skipped (logged) until PORTAL_URL and PORTAL_SUBMISSIONS_SECRET are set, like the other steps.
+async function sendToPortal(data: LeadData) {
+  const url = process.env.PORTAL_URL;
+  const secret = process.env.PORTAL_SUBMISSIONS_SECRET;
+  if (!url || !secret) {
+    console.warn("Portal not configured yet; skipping portal submission.");
+    return { skipped: true };
+  }
+  const res = await fetch(`${url.replace(/\/$/, "")}/api/submissions`, {
+    method: "POST",
+    headers: { "content-type": "application/json", "x-portal-secret": secret },
+    body: JSON.stringify({ source: "consult_form", name: data.name, email: data.email, phone: data.phone, data }),
+  });
+  if (!res.ok) throw new Error(`Portal responded ${res.status}`);
+  return { ok: true };
+}
+
 export async function POST(request: Request) {
   const data: LeadData = await request.json();
 
-  const [emailResult, notionResult, closeResult] = await Promise.allSettled([
+  const [emailResult, notionResult, closeResult, portalResult] = await Promise.allSettled([
     sendEmail(data),
     writeToNotion(data),
     createCloseLead(data),
+    sendToPortal(data),
   ]);
 
   if (emailResult.status === "rejected") {
@@ -207,6 +226,9 @@ export async function POST(request: Request) {
   }
   if (closeResult.status === "rejected") {
     console.error("Failed to create Close lead:", closeResult.reason);
+  }
+  if (portalResult.status === "rejected") {
+    console.error("Failed to send lead to the portal:", portalResult.reason);
   }
 
   // Only hard-fail the submission if email was configured but actually failed —
