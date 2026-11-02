@@ -6,6 +6,7 @@ const navItems = [
   { label: "Currently Building", href: "/current-builds" },
   { label: "Process", href: "/process" },
   { label: "Knowledge", href: "/knowledge" },
+  { label: "Cost Calculator", href: "https://calculator.innovadesignstudio.ca/" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

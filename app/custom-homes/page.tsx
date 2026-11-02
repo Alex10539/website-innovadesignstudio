@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
 import ClosingCTA from "../components/ClosingCTA";
+import CalculatorCta from "../components/CalculatorCta";
 import ProjectGrid from "../components/ProjectGrid";
 import JsonLd from "../components/JsonLd";
 import { customHomeProjects } from "../lib/portfolio-data";
@@ -82,6 +83,8 @@ export default function CustomHomesPage() {
           </ul>
         </div>
       </section>
+
+      <CalculatorCta variant="banner" />
 
       <section className="mx-auto w-full max-w-5xl px-6 py-24">
         <h2 className="mb-10 font-heading text-2xl font-bold">Recent projects</h2>

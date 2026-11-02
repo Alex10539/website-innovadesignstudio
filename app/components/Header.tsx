@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import NavDropdown from "./NavDropdown";
+import { CALCULATOR_URL } from "./CalculatorCta";
 
 const directLinks = [
   { label: "Custom Homes", href: "/custom-homes" },
@@ -39,7 +40,7 @@ export default function Header() {
           Innova<span className="text-accent">.</span> Design Studio
         </a>
 
-        <nav className="hidden items-center gap-5 text-sm text-ink lg:flex">
+        <nav className="hidden items-center gap-5 whitespace-nowrap text-sm text-ink xl:flex">
           {directLinks.map((item) => (
             <a key={item.href} href={item.href} className="hover:text-accent">
               {item.label}
@@ -49,6 +50,9 @@ export default function Header() {
           <NavDropdown label="Resources" items={resources} />
           <a href="/about" className="hover:text-accent">
             About
+          </a>
+          <a href={CALCULATOR_URL} className="font-bold text-accent hover:opacity-80">
+            Cost Calculator
           </a>
           <a
             href="tel:5063004380"
@@ -68,7 +72,7 @@ export default function Header() {
           <button
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Toggle menu"
-            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 xl:hidden"
           >
             <span
               className="h-0.5 w-6 bg-ink transition-transform"
@@ -87,7 +91,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="border-t border-cream-300/60 px-6 py-6 lg:hidden">
+        <div className="border-t border-cream-300/60 px-6 py-6 xl:hidden">
           <nav className="flex flex-col gap-4 text-sm text-ink">
             {allMobileLinks.map((item) => (
               <a
@@ -99,6 +103,9 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
+            <a href={CALCULATOR_URL} className="font-bold text-accent">
+              Cost Calculator
+            </a>
             <a href="tel:5063004380" className="text-ink/70">
               506-300-4380
             </a>
