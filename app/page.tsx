@@ -98,11 +98,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Proof bar: track record directly under the hero */}
+      <section className="border-b border-cream-300 bg-cream-50 px-6 py-8">
+        <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-8 text-center sm:flex-row sm:gap-16">
+          <div>
+            <div className="font-heading text-3xl font-bold text-ink sm:text-4xl">300+</div>
+            <div className="mt-1 text-sm text-ink/60">homes delivered</div>
+          </div>
+          <div className="hidden h-10 w-px bg-cream-300 sm:block" />
+          <div>
+            <div className="font-heading text-3xl font-bold text-ink sm:text-4xl">10+</div>
+            <div className="mt-1 text-sm text-ink/60">years designing</div>
+          </div>
+          <div className="hidden h-10 w-px bg-cream-300 sm:block" />
+          <div>
+            <div className="font-heading text-2xl font-bold text-ink sm:text-3xl">
+              Atlantic Canada
+            </div>
+            <div className="mt-1 text-sm text-ink/60">based in New Brunswick</div>
+          </div>
+        </div>
+      </section>
+
       <section className="border-b border-cream-300 px-6 py-6 text-center">
         <p className="text-sm italic text-ink/60">
           &ldquo;Incredibly responsive, professional, and always one step
           ahead.&rdquo; <span className="not-italic text-ink/40">— Google Review</span>
         </p>
+      </section>
+
+      {/* Home cost calculator: high-intent, low-commitment entry point */}
+      <section className="border-b border-cream-300 bg-ink px-6 py-20">
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
+          <span className="text-xs font-bold uppercase tracking-widest text-accent">
+            Free cost estimate
+          </span>
+          <h2 className="font-heading text-3xl font-bold text-white sm:text-4xl">
+            Wondering what your home will cost?
+          </h2>
+          <p className="max-w-xl text-white/70">
+            Use our home cost calculator to get a ballpark for your custom home, renovation,
+            or addition in New Brunswick, before you ever pick up the phone. Plain numbers,
+            no obligation.
+          </p>
+          <a
+            href="https://calculator.innovadesignstudio.ca/"
+            className="rounded-none bg-accent px-10 py-5 text-base font-bold tracking-wide text-white shadow-lg transition-opacity hover:opacity-90"
+          >
+            See what your home will cost →
+          </a>
+        </div>
       </section>
 
       <section className="mx-auto w-full max-w-2xl px-6 py-24 text-center">
