@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const CALCULATOR_URL = "https://calculator.innovadesignstudio.ca/";
 
 const points = [
@@ -39,7 +41,7 @@ export default function CalculatorCta({
 
   return (
     <section className="border-b border-cream-300 bg-ink px-6 py-20 sm:py-24">
-      <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-[2fr_3fr] md:gap-12 lg:gap-16">
         <div className="min-w-0 text-center md:text-left">
           <span className="text-xs font-bold uppercase tracking-widest text-accent">
             Free cost estimate
@@ -66,36 +68,32 @@ export default function CalculatorCta({
           </p>
         </div>
 
-        {/* Static preview of the live calculator result (see calculator.innovadesignstudio.ca) */}
+        {/* Screenshot of the live calculator (calculator.innovadesignstudio.ca) — retake if its look or pricing changes */}
         <a
           href={CALCULATOR_URL}
           aria-label="Open the home cost calculator"
-          className="group mx-auto block w-full min-w-0 max-w-sm bg-cream-50 p-6 sm:p-7 text-left shadow-2xl transition-transform hover:-translate-y-1 md:max-w-none"
+          className="group mx-auto block w-full min-w-0 shadow-2xl transition-transform hover:-translate-y-1"
         >
-          <div className="text-xs font-bold uppercase tracking-widest text-accent">
-            Your price guide
+          <div className="flex items-center gap-1.5 bg-cream-200 px-3 py-2.5">
+            <span className="h-2.5 w-2.5 rounded-full bg-ink/20" />
+            <span className="h-2.5 w-2.5 rounded-full bg-ink/20" />
+            <span className="h-2.5 w-2.5 rounded-full bg-ink/20" />
+            <span className="ml-3 truncate bg-cream-50 px-3 py-0.5 text-[11px] text-ink/50">
+              calculator.innovadesignstudio.ca
+            </span>
           </div>
-          <div className="mt-4 whitespace-nowrap font-heading text-2xl font-bold text-ink sm:text-3xl md:text-2xl lg:text-4xl">
-            $429,000 – $525,000
-          </div>
-          <p className="mt-2 text-sm text-ink/60">
-            1,400 sq ft bungalow · about $340/sq ft, plus add-ons
-          </p>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {["Roof", "Finishes", "Kitchen", "Foundation", "Siding", "Heating"].map((chip) => (
-              <span
-                key={chip}
-                className="border border-cream-300 bg-cream-100 px-3 py-1 text-xs text-ink/70"
-              >
-                {chip}
-              </span>
-            ))}
-            <span className="px-1 py-1 text-xs text-ink/50">+ more</span>
-          </div>
-          <div className="mt-6 flex items-center justify-between border-t border-cream-300 pt-4 text-xs">
-            <span className="text-ink/50">Example only — yours updates as you choose</span>
+          <Image
+            src="/images/calculator-snip.png"
+            alt="Screenshot of the Innova home cost calculator showing a live price guide of $429,000 to $525,000 for a 1,400 sq ft bungalow"
+            width={780}
+            height={418}
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="block h-auto w-full"
+          />
+          <div className="flex items-center justify-between bg-cream-50 px-4 py-3 text-xs">
+            <span className="text-ink/50">Example: 1,400 sq ft bungalow</span>
             <span className="font-bold text-accent transition-transform group-hover:translate-x-1">
-              Try it →
+              Try it yourself →
             </span>
           </div>
         </a>
