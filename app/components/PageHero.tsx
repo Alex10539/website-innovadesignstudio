@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { blurFor } from "../lib/blur-data";
 
 export default function PageHero({
   title,
@@ -21,6 +22,8 @@ export default function PageHero({
             fill
             sizes="100vw"
             priority
+            placeholder={blurFor(image) ? "blur" : "empty"}
+            blurDataURL={blurFor(image)}
             className="object-cover opacity-55"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/30" />

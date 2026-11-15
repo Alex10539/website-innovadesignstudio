@@ -8,11 +8,20 @@ export default function Lightbox({
   initialIndex = 0,
   onClose,
   label = "Photo",
+  alts,
+  caption,
+  meta,
 }: {
   images: string[] | null;
   initialIndex?: number;
   onClose: () => void;
   label?: string;
+  /** Per-photo alt text, same order as `images` */
+  alts?: string[];
+  /** Shown under the photo, e.g. the project title */
+  caption?: string;
+  /** Smaller line under the caption, e.g. "Custom Home · Timberline" */
+  meta?: string;
 }) {
   const [index, setIndex] = useState(initialIndex);
 
@@ -71,7 +80,7 @@ export default function Lightbox({
         >
           <Image
             src={images[index]}
-            alt={`${label} — photo ${index + 1} of ${images.length}`}
+            alt={alts?.[index] ?? `${label} — photo ${index + 1} of ${images.length}`}
             fill
             sizes="90vw"
             className="object-contain"
@@ -120,9 +129,19 @@ export default function Lightbox({
         </div>
       )}
 
-      {hasMultiple && (
-        <div className="mt-2 text-sm font-bold text-white/70">
-          {index + 1} / {images.length}
+      {(caption || hasMultiple) && (
+        <div className="mt-3 text-center" onClick={(e) => e.stopPropagation()}>
+          {caption && <div className="font-heading text-base font-bold text-white">{caption}</div>}
+          {meta && (
+            <div className="mt-0.5 text-xs font-bold uppercase tracking-widest text-white/60">
+              {meta}
+            </div>
+          )}
+          {hasMultiple && (
+            <div className="mt-1 text-sm font-bold text-white/70">
+              {index + 1} / {images.length}
+            </div>
+          )}
         </div>
       )}
     </div>

@@ -18,8 +18,8 @@ export default function PortfolioPage() {
       <PageHero
         title="Our Work"
         subtitle="Custom homes, multi-unit developments, and renovations across Atlantic Canada."
-        image="/images/portfolio/custom-homes-1.jpg"
-        imageAlt="Custom home exterior with a stone base, dark wood siding, and a glass observation tower, designed by Innova Design Studio"
+        image="/images/portfolio/renovations-32.jpg"
+        imageAlt="Beachfront home with a dark gabled roof and a glass-enclosed timber pergola, designed by Innova Design Studio"
       />
       <section className="mx-auto w-full max-w-5xl px-6 py-14">
         <PortfolioGrid />

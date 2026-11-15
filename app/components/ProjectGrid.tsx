@@ -3,8 +3,7 @@
 import { useState } from "react";
 import ProjectTile from "./ProjectTile";
 import Lightbox from "./Lightbox";
-
-export type ProjectSet = { id: string; images: string[] };
+import type { ProjectSet } from "../lib/portfolio-data";
 
 export default function ProjectGrid({
   projects,
@@ -17,7 +16,7 @@ export default function ProjectGrid({
   className?: string;
   aspect?: string;
 }) {
-  const [active, setActive] = useState<string[] | null>(null);
+  const [open, setOpen] = useState<ProjectSet | null>(null);
 
   return (
     <>
@@ -27,13 +26,22 @@ export default function ProjectGrid({
             key={p.id}
             type={type}
             image={p.images[0]}
+            title={p.title}
+            alt={p.alt}
+            location={p.location}
             photoCount={p.images.length}
             aspect={aspect}
-            onClick={() => setActive(p.images)}
+            onClick={() => setOpen(p)}
           />
         ))}
       </div>
-      <Lightbox images={active} onClose={() => setActive(null)} label={`${type} project`} />
+      <Lightbox
+        images={open ? open.images : null}
+        onClose={() => setOpen(null)}
+        label={open?.alt ?? `${type} project`}
+        caption={open?.title}
+        meta={open ? [type, open.location].filter(Boolean).join(" · ") : undefined}
+      />
     </>
   );
 }

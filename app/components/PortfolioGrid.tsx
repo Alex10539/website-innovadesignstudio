@@ -7,9 +7,10 @@ import {
   customHomeProjects,
   multiUnitProjects,
   renovationProjects,
+  type ProjectSet,
 } from "../lib/portfolio-data";
 
-type Entry = { id: string; images: string[]; type: "Custom Home" | "Multi-Unit" | "Renovation" };
+type Entry = ProjectSet & { type: "Custom Home" | "Multi-Unit" | "Renovation" };
 
 const allProjects: Entry[] = [
   ...customHomeProjects.map((p) => ({ ...p, type: "Custom Home" as const })),
@@ -35,14 +36,13 @@ const filters = ["All", "Custom Home", "Multi-Unit", "Renovation"] as const;
 
 export default function PortfolioGrid() {
   const [activeFilter, setActiveFilter] = useState<(typeof filters)[number]>("All");
-  const [lightboxImages, setLightboxImages] = useState<string[] | null>(null);
-  const [lightboxType, setLightboxType] = useState<string>("Project");
+  const [open, setOpen] = useState<Entry | null>(null);
   const shown =
     activeFilter === "All" ? projects : projects.filter((p) => p.type === activeFilter);
 
   return (
     <div>
-      <div className="mb-14 flex flex-wrap justify-center gap-8 border-b border-cream-300 pb-6">
+      <div className="mb-14 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 border-b border-cream-300 pb-6">
         {filters.map((f) => (
           <button
             key={f}
@@ -54,6 +54,13 @@ export default function PortfolioGrid() {
             {f}
           </button>
         ))}
+        <a
+          href="/current-builds"
+          className="flex items-center gap-2 text-sm font-bold tracking-wide text-accent hover:opacity-80"
+        >
+          <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
+          Currently Building →
+        </a>
       </div>
       <div className="columns-1 gap-x-3 sm:columns-2 lg:columns-3">
         {shown.map((p, i) => (
@@ -61,20 +68,22 @@ export default function PortfolioGrid() {
             <ProjectTile
               type={p.type}
               image={p.images[0]}
+              title={p.title}
+              alt={p.alt}
+              location={p.location}
               photoCount={p.images.length}
               aspect={i % 3 === 0 ? "3/4" : "4/5"}
-              onClick={() => {
-                setLightboxImages(p.images);
-                setLightboxType(p.type);
-              }}
+              onClick={() => setOpen(p)}
             />
           </div>
         ))}
       </div>
       <Lightbox
-        images={lightboxImages}
-        onClose={() => setLightboxImages(null)}
-        label={`${lightboxType} project`}
+        images={open ? open.images : null}
+        onClose={() => setOpen(null)}
+        label={open?.alt ?? "Project"}
+        caption={open?.title}
+        meta={open ? [open.type, open.location].filter(Boolean).join(" · ") : undefined}
       />
     </div>
   );

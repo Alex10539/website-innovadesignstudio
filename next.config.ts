@@ -26,6 +26,9 @@ const nextConfig: NextConfig = {
       { source: "/contactcopy", destination: "/contact", permanent: true },
       { source: "/contact-old", destination: "/contact", permanent: true },
 
+      // Common mistyped URL for the Currently Building page
+      { source: "/currently-building", destination: "/current-builds", permanent: true },
+
       // Old process draft -> canonical process page
       { source: "/our-process-1", destination: "/process", permanent: true },
 

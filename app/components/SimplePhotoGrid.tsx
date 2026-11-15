@@ -7,9 +7,12 @@ import Lightbox from "./Lightbox";
 export default function SimplePhotoGrid({
   images,
   label = "Photo",
+  alts,
 }: {
   images: string[];
   label?: string;
+  /** Unique alt text per photo, same order as `images` */
+  alts?: string[];
 }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -25,7 +28,7 @@ export default function SimplePhotoGrid({
           >
             <Image
               src={src}
-              alt={`${label} — photo ${i + 1} of ${images.length}`}
+              alt={alts?.[i] ?? `${label} — photo ${i + 1} of ${images.length}`}
               fill
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -39,6 +42,7 @@ export default function SimplePhotoGrid({
         initialIndex={activeIndex ?? 0}
         onClose={() => setActiveIndex(null)}
         label={label}
+        alts={alts}
       />
     </div>
   );

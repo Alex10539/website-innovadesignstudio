@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import LeadForm from "./components/LeadForm";
 import CalculatorCta, { CALCULATOR_URL } from "./components/CalculatorCta";
+import GoogleReviews, { RatingBadge } from "./components/GoogleReviews";
 
 const services = [
   {
@@ -125,10 +126,14 @@ export default function Home() {
       </section>
 
       <section className="border-b border-cream-300 px-6 py-6 text-center">
-        <p className="text-sm italic text-ink/60">
-          &ldquo;Incredibly responsive, professional, and always one step
-          ahead.&rdquo; <span className="not-italic text-ink/40">— Google Review</span>
-        </p>
+        <a href="#reviews" className="text-sm text-ink/70 hover:text-ink">
+          <RatingBadge /> <span className="text-ink/40">·</span>{" "}
+          <span className="italic">
+            &ldquo;Incredibly responsive, professional, and always one step
+            ahead.&rdquo;
+          </span>{" "}
+          <span className="text-ink/40">— Christopher Bari</span>
+        </a>
       </section>
 
       {/* Home cost calculator: high-intent, low-commitment entry point */}
@@ -222,12 +227,12 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {[
             {
-              src: "/images/portfolio/custom-homes-40.jpg",
-              alt: "Modern custom home with a wraparound covered deck, designed by Innova Design Studio",
+              src: "/images/portfolio/custom-homes-20.jpg",
+              alt: "Modern custom home with a tall glazed gable, vertical wood siding, and a standing-seam metal roof, designed by Innova Design Studio",
             },
             {
               src: "/images/portfolio/custom-homes-52.jpg",
-              alt: "Rendering of an attached single-story residential development designed by Innova Design Studio",
+              alt: "Hillside custom home with white siding, a covered deck, and a large glazed sunroom, designed by Innova Design Studio",
             },
             {
               src: "/images/portfolio/custom-homes-1.jpg",
@@ -259,12 +264,12 @@ export default function Home() {
               alt: "Interior view of a home's roof framing during construction",
             },
             {
-              src: "/images/portfolio/renovations-29.jpg",
-              alt: "Aerial view of a home addition under construction, wrapped in house wrap",
+              src: "/images/current-builds/build-11.jpg",
+              alt: "Gable-front home wrapped in house wrap with a tall black-framed window and scaffolding",
             },
             {
               src: "/images/current-builds/build-7.jpg",
-              alt: "Aerial view of an active construction site with a nearly complete garage building",
+              alt: "Detached garage with grey shingles and white siding on an active job site",
             },
           ].map((img) => (
             <div key={img.src} className="relative aspect-[3/4] overflow-hidden">
@@ -277,14 +282,7 @@ export default function Home() {
         </a>
       </section>
 
-      <section className="mx-auto w-full max-w-2xl px-6 py-24 text-center">
-        <p className="font-heading text-xl italic leading-relaxed text-terracotta sm:text-2xl">
-          &ldquo;Alexander&apos;s deep knowledge of building codes gave us total confidence.
-          We&apos;re extremely grateful for their diligence, which likely saved us from
-          major issues down the road.&rdquo;
-        </p>
-        <p className="mt-5 text-sm text-ink/50">— Luke Docksteader, Google Review</p>
-      </section>
+      <GoogleReviews />
 
       <section id="contact-form" className="bg-ink py-24">
         <div className="mx-auto max-w-2xl px-6 text-center">

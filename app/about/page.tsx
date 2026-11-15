@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
 import ClosingCTA from "../components/ClosingCTA";
+import { blurFor } from "../lib/blur-data";
 
 export const metadata: Metadata = {
   title: "About | Innova Design Studio | Atlantic Canada",
@@ -30,6 +31,9 @@ export default function AboutPage() {
               alt="Alexander Corasaniti, founder of Innova Design Studio"
               fill
               sizes="(min-width: 640px) 280px, 60vw"
+              priority
+              placeholder="blur"
+              blurDataURL={blurFor("/images/about-headshot.jpg")}
               className="object-cover"
             />
           </div>
@@ -46,7 +50,7 @@ export default function AboutPage() {
               lives and get no real answer.
             </p>
             <p className="mx-auto mt-4 max-w-lg text-ink/60 sm:mx-0">
-              He started Innova to fix that. Ten years and 200+ homes later, that&apos;s
+              He started Innova to fix that. Ten years and 300+ homes later, that&apos;s
               still what the studio is built around.
             </p>
           </div>
