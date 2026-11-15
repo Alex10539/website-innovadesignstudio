@@ -17,6 +17,25 @@ const images = [
   "/images/current-builds/build-20.jpg",
 ];
 
+// Finished Timberline home, in display order. `aspect` is each photo's real shape.
+const timberline = [
+  { n: 12, aspect: "3/2", alt: "Front of the home with a curved driveway and lawn, a gabled entry, a black metal roof, and a two-storey garage wing" },
+  { n: 2, aspect: "16/9", alt: "Aerial view of a hillside home with a black metal roof and wood-toned siding overlooking the valley and city" },
+  { n: 1, aspect: "3/2", alt: "Front entry of a single-storey home with a black metal roof, a gabled entry, and a black front door with side lights" },
+  { n: 11, aspect: "3/2", alt: "Side view of the garage wing with a metal hip roof, black garage doors, and a skid steer on a gravel driveway" },
+  { n: 10, aspect: "3/2", alt: "Two-bay garage with black doors and a skid steer parked in front of a wood-toned upper level" },
+  { n: 9, aspect: "2/3", alt: "Black garage door with a column of frosted windows beneath a wood-toned upper floor and a metal awning" },
+  { n: 3, aspect: "2/3", alt: "Upper deck with a glass railing and patio chairs overlooking a sloping lawn" },
+  { n: 4, aspect: "2/3", alt: "Back of the home with a glass-railed upper deck, a barbecue, and a stamped-concrete patio with chairs below" },
+  { n: 5, aspect: "2/3", alt: "Walkout side of the home with a glass sunroom, an upper deck, and a stone retaining wall" },
+  { n: 7, aspect: "2/3", alt: "Kitchen with a vaulted ceiling, a large island, pendant lights, and a window wall overlooking the valley" },
+  { n: 6, aspect: "2/3", alt: "Kitchen counter with a black undermount sink and a row of wood-trimmed windows with a valley view" },
+  { n: 8, aspect: "2/3", alt: "Living room with floor-to-ceiling windows overlooking a green lawn and the distant valley" },
+];
+const timberlineImages = timberline.map((t) => `/images/current-builds/timberline-${t.n}.jpg`);
+const timberlineAlts = timberline.map((t) => t.alt);
+const timberlineAspects = timberline.map((t) => t.aspect);
+
 const containerImages = Array.from(
   { length: 14 },
   (_, i) => `/images/current-builds/container-home-${i + 1}.jpg`
@@ -70,21 +89,43 @@ export default function CurrentBuildsPage() {
       <PageHero
         title="Currently Building"
         subtitle="Real photos from real job sites — a look at what's underway right now across Atlantic Canada."
-        image="/images/current-builds/build-12.jpg"
-        imageAlt="Aerial view of a long single-storey home being framed on a green lot"
+        image="/images/current-builds/timberline-2.jpg"
+        imageAlt="Aerial view of a hillside home with a black metal roof and wood-toned siding overlooking the valley and city"
         tall
-        imagePosition="center 50%"
+        imagePosition="center 40%"
       />
 
       <section className="mx-auto w-full max-w-2xl px-6 py-16 text-center">
         <p className="text-ink/60">
-          Our finished-project galleries show the end result. This page shows the part
-          in between — framing, site visits, and work in progress on active builds.
+          Our project galleries show the design. This page shows the real thing — a recently
+          finished home, plus framing, site visits, and work in progress on active builds.
         </p>
       </section>
 
       <section className="mx-auto w-full max-w-5xl px-6 pb-24">
-        <SimplePhotoGrid images={images} label="Active job site" alts={alts} />
+        <h2 className="font-heading text-2xl font-bold">Timberline — finished</h2>
+        <p className="mt-3 max-w-xl text-ink/60">
+          A look at the finished Timberline home: hillside views, a black metal roof,
+          glass-railed decks, and a vaulted kitchen with a window wall.
+        </p>
+        <div className="mt-10">
+          <SimplePhotoGrid
+            images={timberlineImages}
+            label="Timberline finished home"
+            alts={timberlineAlts}
+            aspects={timberlineAspects}
+          />
+        </div>
+
+        <div className="mt-24 border-t border-cream-300 pt-16">
+          <h2 className="font-heading text-2xl font-bold">On the job site</h2>
+          <p className="mt-3 max-w-xl text-ink/60">
+            Framing, site visits, and work in progress on active builds.
+          </p>
+          <div className="mt-10">
+            <SimplePhotoGrid images={images} label="Active job site" alts={alts} />
+          </div>
+        </div>
 
         <div className="mt-24 border-t border-cream-300 pt-16">
           <h2 className="font-heading text-2xl font-bold">Custom container home</h2>

@@ -8,11 +8,14 @@ export default function SimplePhotoGrid({
   images,
   label = "Photo",
   alts,
+  aspects,
 }: {
   images: string[];
   label?: string;
   /** Unique alt text per photo, same order as `images` */
   alts?: string[];
+  /** Real width/height of each photo (e.g. "3/2"), so nothing gets cropped */
+  aspects?: string[];
 }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -24,7 +27,7 @@ export default function SimplePhotoGrid({
             key={src}
             onClick={() => setActiveIndex(i)}
             className="group relative mb-3 block w-full overflow-hidden bg-cream-200 break-inside-avoid"
-            style={{ aspectRatio: i % 3 === 1 ? "3/4" : "4/5" }}
+            style={{ aspectRatio: aspects?.[i] ?? (i % 3 === 1 ? "3/4" : "4/5") }}
           >
             <Image
               src={src}
