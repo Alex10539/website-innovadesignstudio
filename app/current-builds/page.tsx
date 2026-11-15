@@ -70,8 +70,10 @@ export default function CurrentBuildsPage() {
       <PageHero
         title="Currently Building"
         subtitle="Real photos from real job sites — a look at what's underway right now across Atlantic Canada."
-        image="/images/current-builds/build-15.jpg"
-        imageAlt="Gabled entry with timber truss detail and a black front door on a home under construction"
+        image="/images/current-builds/build-12.jpg"
+        imageAlt="Aerial view of a long single-storey home being framed on a green lot"
+        tall
+        imagePosition="center 50%"
       />
 
       <section className="mx-auto w-full max-w-2xl px-6 py-16 text-center">
