@@ -46,6 +46,8 @@ export default function CustomHomesPage() {
         title="Custom Homes"
         subtitle="A custom-built home is more than a house — it's a reflection of you. We design it, navigate the approvals, and hand you a project that's ready to build."
         image="/images/portfolio/custom-homes-40.jpg"
+        tall
+        imagePosition="center 70%"
         imageAlt="Modern custom home with a wraparound covered deck, designed by Innova Design Studio"
       />
 

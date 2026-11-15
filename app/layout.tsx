@@ -30,7 +30,7 @@ const localBusinessJsonLd = {
   url: SITE_URL,
   telephone: SITE_PHONE,
   email: SITE_EMAIL,
-  image: `${SITE_URL}/images/portfolio/custom-homes-1.jpg`,
+  image: `${SITE_URL}/images/portfolio/custom-homes-70.jpg`,
   areaServed: {
     "@type": "Place",
     name: "Atlantic Canada",

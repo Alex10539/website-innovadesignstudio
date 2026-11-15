@@ -10,7 +10,7 @@ const services = [
     title: "Custom Homes",
     desc: "Ground-up design for homeowners building the home they've been picturing.",
     href: "/custom-homes",
-    image: "/images/custom-homes-category.jpg",
+    image: "/images/portfolio/custom-homes-70.jpg",
   },
   {
     title: "Multi-Unit",
@@ -235,8 +235,8 @@ export default function Home() {
               alt: "Hillside custom home with white siding, a covered deck, and a large glazed sunroom, designed by Innova Design Studio",
             },
             {
-              src: "/images/portfolio/custom-homes-1.jpg",
-              alt: "Custom home exterior with a stone base and a glass observation tower, designed by Innova Design Studio",
+              src: "/images/portfolio/custom-homes-67.jpg",
+              alt: "Modern two-storey custom home with white stone, wood panelling, and tall black-framed windows glowing at dusk, designed by Innova Design Studio",
             },
             {
               src: "/images/portfolio/custom-homes-42.jpg",
