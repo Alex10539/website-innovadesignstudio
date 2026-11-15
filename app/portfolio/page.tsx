@@ -19,6 +19,8 @@ export default function PortfolioPage() {
         title="Our Work"
         subtitle="Custom homes, multi-unit developments, and renovations across Atlantic Canada."
         image="/images/portfolio/renovations-32.jpg"
+        tall
+        imagePosition="center 62%"
         imageAlt="Beachfront home with a dark gabled roof and a glass-enclosed timber pergola, designed by Innova Design Studio"
       />
       <section className="mx-auto w-full max-w-5xl px-6 py-14">

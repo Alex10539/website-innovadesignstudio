@@ -52,6 +52,8 @@ export default function RenovationsPage() {
         title="Renovations & Additions"
         subtitle="Thoughtful updates and additions to the home you already have — designed to fit, approved to build."
         image="/images/portfolio/renovations-2.jpg"
+        tall
+        imagePosition="center 50%"
         imageAlt="Renovated kitchen with white cabinetry, marble-look countertops, and gold hardware, by Innova Design Studio"
       />
 

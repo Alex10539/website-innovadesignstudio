@@ -60,6 +60,8 @@ export default function MultiUnitPage() {
         title="Multi-Unit Design"
         subtitle="Design and approvals for developers building beyond a single home — with bylaw and zoning risk handled before it becomes a costly surprise."
         image="/images/portfolio/multi-unit-4.jpg"
+        tall
+        imagePosition="center 55%"
         imageAlt="Row of attached multi-unit townhomes with matching gable rooflines, designed by Innova Design Studio"
       />
 
