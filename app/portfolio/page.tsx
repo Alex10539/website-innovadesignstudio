@@ -6,9 +6,9 @@ import ClosingCTA from "../components/ClosingCTA";
 import PortfolioGrid from "../components/PortfolioGrid";
 
 export const metadata: Metadata = {
-  title: "Our Work | Innova Design Studio | Atlantic Canada",
+  title: "Our Work — Custom Homes and Renovations in Moncton, NB | Innova Design Studio",
   description:
-    "Custom homes, multi-unit developments, and renovations designed by Innova Design Studio across Atlantic Canada.",
+    "See custom homes, multi-unit buildings, and renovations designed by Innova Design Studio in Moncton, Dieppe, Riverview, and Shediac.",
 };
 
 export default function PortfolioPage() {

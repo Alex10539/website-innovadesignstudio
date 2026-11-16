@@ -3,15 +3,16 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
 import ClosingCTA from "../components/ClosingCTA";
+import HelpfulReading from "../components/HelpfulReading";
 import ProjectGrid from "../components/ProjectGrid";
 import JsonLd from "../components/JsonLd";
 import { renovationProjects } from "../lib/portfolio-data";
 import { SITE_URL, SITE_NAME } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: "Renovations & Additions | Innova Design Studio | Atlantic Canada",
+  title: "Renovations and Additions in Moncton, NB | Innova Design Studio",
   description:
-    "Renovation and addition design across Atlantic Canada — designed to fit your existing home, approved to build.",
+    "Renovations and additions for older New Brunswick homes, designed to current bylaws in Moncton, Dieppe, Riverview, and Shediac. Book a free consult.",
 };
 
 const serviceJsonLd = {
@@ -105,6 +106,8 @@ export default function RenovationsPage() {
           <ProjectGrid projects={renovationProjects} type="Renovation" />
         </div>
       </section>
+
+      <HelpfulReading slugs={["renovating-older-home-new-brunswick", "moncton-permit-process"]} />
 
       <ClosingCTA
         heading="Thinking about a renovation or addition?"

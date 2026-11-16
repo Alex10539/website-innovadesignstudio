@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "./lib/site";
+import { articles } from "./lib/articles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -16,6 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/about", priority: 0.6, changeFrequency: "yearly" },
     { path: "/contact", priority: 0.6, changeFrequency: "yearly" },
   ];
+
+  for (const a of articles) {
+    pages.push({ path: `/knowledge/${a.slug}`, priority: 0.6, changeFrequency: "monthly" });
+  }
 
   return pages.map((p) => ({
     url: `${SITE_URL}${p.path}`,

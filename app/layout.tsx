@@ -18,9 +18,9 @@ const nunito = Nunito_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Innova Design Studio | Custom Home & Multi-Unit Design in Atlantic Canada",
+  title: "Custom Home Designer in Moncton, NB | Innova Design Studio",
   description:
-    "Custom home, multi-unit, and renovation design across Atlantic Canada. Full-lifecycle design and permitting so your project moves from idea to built without surprises.",
+    "Custom homes, multi-unit buildings, and renovations designed in Moncton, Dieppe, Riverview, and Shediac. Permit-ready design from Innova Design Studio. Book a free consult.",
 };
 
 const localBusinessJsonLd = {
@@ -31,10 +31,13 @@ const localBusinessJsonLd = {
   telephone: SITE_PHONE,
   email: SITE_EMAIL,
   image: `${SITE_URL}/images/portfolio/custom-homes-70.jpg`,
-  areaServed: {
-    "@type": "Place",
-    name: "Atlantic Canada",
-  },
+  areaServed: [
+    { "@type": "City", name: "Moncton" },
+    { "@type": "City", name: "Dieppe" },
+    { "@type": "City", name: "Riverview" },
+    { "@type": "City", name: "Shediac" },
+    { "@type": "AdministrativeArea", name: "New Brunswick" },
+  ],
   address: {
     "@type": "PostalAddress",
     addressRegion: "NB",

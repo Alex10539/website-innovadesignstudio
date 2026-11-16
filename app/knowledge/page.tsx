@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
 import ClosingCTA from "../components/ClosingCTA";
+import { articles } from "../lib/articles";
 
 export const metadata: Metadata = {
   title: "Knowledge | Innova Design Studio | Atlantic Canada",
@@ -10,24 +11,11 @@ export const metadata: Metadata = {
     "Straight answers to the questions people ask us most before starting a custom home, multi-unit, or renovation project in Atlantic Canada.",
 };
 
-const articles = [
-  {
-    title: "How long does it take to get a building permit in Atlantic Canada?",
-    brief:
-      "Realistic timeline expectations, what affects them, and how a bylaw review up front shortens the process.",
-  },
-  {
-    title: "Custom home vs. renovation: what's the real cost difference?",
-    brief: "A framework for thinking about the tradeoff between building new and renovating.",
-  },
+// Planned articles that are not written yet
+const comingSoon = [
   {
     title: "What does a residential designer do vs. an architect?",
     brief: "Clarifying a commonly-asked comparison question for people weighing their options.",
-  },
-  {
-    title: "Bylaw compliance 101 for homeowners planning an addition",
-    brief:
-      "A plain-language overview of what zoning, setback, and height rules mean in practice.",
   },
   {
     title: "What developers should know before starting a multi-unit project",
@@ -52,6 +40,20 @@ export default function KnowledgePage() {
       <section className="mx-auto w-full max-w-3xl px-6 py-14">
         <div className="flex flex-col divide-y divide-cream-300">
           {articles.map((a) => (
+            <a key={a.slug} href={`/knowledge/${a.slug}`} className="group block py-6">
+              <span className="text-[11px] font-bold uppercase tracking-widest text-accent">
+                {a.category}
+              </span>
+              <h2 className="mt-1 font-heading font-bold transition-colors group-hover:text-accent">
+                {a.title}
+              </h2>
+              <p className="mt-1 text-sm text-ink/70">{a.summary}</p>
+              <span className="mt-2 inline-block text-sm font-bold text-accent">
+                Read the article →
+              </span>
+            </a>
+          ))}
+          {comingSoon.map((a) => (
             <div key={a.title} className="py-6">
               <h2 className="font-heading font-bold">{a.title}</h2>
               <p className="mt-1 text-sm text-ink/70">{a.brief}</p>

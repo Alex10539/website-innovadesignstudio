@@ -9,9 +9,9 @@ import { multiUnitProjects } from "../lib/portfolio-data";
 import { SITE_URL, SITE_NAME } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: "Multi-Unit Design | Innova Design Studio | Atlantic Canada",
+  title: "Multi-Unit Building Design in Moncton, NB | Innova Design Studio",
   description:
-    "Multi-unit residential design for developers across Atlantic Canada — bylaw and zoning risk handled before it costs you time or money.",
+    "Multi-unit design and approvals for developers in Moncton, Dieppe, and Riverview, NB. Innova Design Studio guides your project from concept to permit.",
 };
 
 const serviceJsonLd = {

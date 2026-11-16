@@ -131,6 +131,31 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-b border-cream-300 bg-cream-100 px-6 py-16 text-center">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="font-heading text-2xl font-bold text-ink sm:text-3xl">
+            Designed here, for here.
+          </h2>
+          <p className="mt-5 leading-relaxed text-ink/70">
+            Innova Design Studio designs custom homes, multi-unit buildings, and renovations in
+            Moncton, Dieppe, Riverview, and Shediac, and across New Brunswick. We know the local
+            bylaws, the permit offices, and what actually gets approved here, so your design is
+            permit-ready, not just pretty on paper.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+            <a
+              href="#contact-form"
+              className="rounded-none bg-accent px-8 py-4 text-sm font-bold tracking-wide text-white shadow-lg transition-opacity hover:opacity-90"
+            >
+              Book a free consult — no obligation
+            </a>
+            <a href="tel:5063004380" className="text-sm font-bold text-ink hover:text-accent">
+              506-300-4380
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="border-b border-cream-300 px-6 py-6 text-center">
         <a href="#reviews" className="text-sm text-ink/70 hover:text-ink">
           <RatingBadge /> <span className="text-ink/40">·</span>{" "}

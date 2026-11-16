@@ -5,15 +5,16 @@ import PageHero from "../components/PageHero";
 import ClosingCTA from "../components/ClosingCTA";
 import CalculatorCta from "../components/CalculatorCta";
 import GoogleReviews from "../components/GoogleReviews";
+import HelpfulReading from "../components/HelpfulReading";
 import ProjectGrid from "../components/ProjectGrid";
 import JsonLd from "../components/JsonLd";
 import { customHomeProjects } from "../lib/portfolio-data";
 import { SITE_URL, SITE_NAME } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: "Custom Home Design | Innova Design Studio | Atlantic Canada",
+  title: "Custom Home Design in Moncton, NB | Innova Design Studio",
   description:
-    "Custom home design across Atlantic Canada — from first sketch through permitting and construction-ready documentation.",
+    "Ground-up custom home design in Moncton and across New Brunswick, from concept to permit-ready drawings. Book a free consult with Innova Design Studio.",
 };
 
 const serviceJsonLd = {
@@ -95,6 +96,8 @@ export default function CustomHomesPage() {
       </section>
 
       <GoogleReviews variant="compact" />
+
+      <HelpfulReading slugs={["moncton-permit-process", "custom-home-cost-new-brunswick"]} />
 
       <ClosingCTA
         heading="Ready to design your custom home?"

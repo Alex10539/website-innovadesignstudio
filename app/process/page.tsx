@@ -6,9 +6,9 @@ import PageHero from "../components/PageHero";
 import ClosingCTA from "../components/ClosingCTA";
 
 export const metadata: Metadata = {
-  title: "Our Process | Innova Design Studio | Atlantic Canada",
+  title: "Our Design Process | Innova Design Studio, Moncton NB",
   description:
-    "From first sketch to final build — how Innova Design Studio designs, permits, and delivers residential projects across Atlantic Canada.",
+    "From first sketch to final build: how Innova Design Studio in Moncton takes a custom home from concept, through permitting, to construction.",
 };
 
 const phases = [

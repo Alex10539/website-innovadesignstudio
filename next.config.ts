@@ -26,6 +26,13 @@ const nextConfig: NextConfig = {
       { source: "/contactcopy", destination: "/contact", permanent: true },
       { source: "/contact-old", destination: "/contact", permanent: true },
 
+      // Short URL for the cost calculator (it lives on its own subdomain)
+      {
+        source: "/cost-calculator",
+        destination: "https://calculator.innovadesignstudio.ca/",
+        statusCode: 301,
+      },
+
       // Common short URLs for the Renovations page
       { source: "/renovations", destination: "/renovations-additions", permanent: true },
       { source: "/renovation", destination: "/renovations-additions", permanent: true },

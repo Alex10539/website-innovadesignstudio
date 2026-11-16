@@ -21,11 +21,25 @@ export default function Footer() {
           </a>
         ))}
       </nav>
-      <div className="flex flex-col items-center gap-2 text-center text-xs text-ink/60 sm:flex-row sm:justify-between">
-        <span>
-          © Innova<span className="text-accent">.</span> Design Studio — Atlantic Canada
-        </span>
-        <span>info@innovadesignstudio.ca · 506-300-4380</span>
+      <div className="mx-auto max-w-3xl text-center text-xs leading-relaxed text-ink/60">
+        <p>
+          © Innova<span className="text-accent">.</span> Design Studio — Custom home,
+          multi-unit, and renovation design in Moncton, Dieppe, Riverview, and Shediac, New
+          Brunswick.
+        </p>
+        <p className="mt-2">
+          <a href="tel:5063004380" className="hover:text-accent">
+            506-300-4380
+          </a>{" "}
+          ·{" "}
+          <a href="mailto:info@innovadesignstudio.ca" className="hover:text-accent">
+            info@innovadesignstudio.ca
+          </a>{" "}
+          ·{" "}
+          <a href="/contact" className="font-bold hover:text-accent">
+            Book a free consult — no obligation.
+          </a>
+        </p>
       </div>
     </footer>
   );
