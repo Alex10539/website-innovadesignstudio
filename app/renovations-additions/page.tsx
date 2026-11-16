@@ -4,6 +4,10 @@ import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
 import ClosingCTA from "../components/ClosingCTA";
 import HelpfulReading from "../components/HelpfulReading";
+import ConsultBlock from "../components/ConsultBlock";
+import ReadyChecklist from "../components/ReadyChecklist";
+import FaqSection from "../components/FaqSection";
+import { renovationsFaq } from "../lib/faqs";
 import ProjectGrid from "../components/ProjectGrid";
 import JsonLd from "../components/JsonLd";
 import { renovationProjects } from "../lib/portfolio-data";
@@ -106,6 +110,10 @@ export default function RenovationsPage() {
           <ProjectGrid projects={renovationProjects} type="Renovation" />
         </div>
       </section>
+
+      <ConsultBlock lead="Renovating or adding to your home? This is where it starts." />
+      <ReadyChecklist variant="home" />
+      <FaqSection heading="Renovation questions, answered" faqs={renovationsFaq} />
 
       <HelpfulReading slugs={["renovating-older-home-new-brunswick", "moncton-permit-process"]} />
 

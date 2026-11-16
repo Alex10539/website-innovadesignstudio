@@ -6,6 +6,10 @@ import ClosingCTA from "../components/ClosingCTA";
 import CalculatorCta from "../components/CalculatorCta";
 import GoogleReviews from "../components/GoogleReviews";
 import HelpfulReading from "../components/HelpfulReading";
+import ConsultBlock from "../components/ConsultBlock";
+import ReadyChecklist from "../components/ReadyChecklist";
+import FaqSection from "../components/FaqSection";
+import { customHomesFaq } from "../lib/faqs";
 import ProjectGrid from "../components/ProjectGrid";
 import JsonLd from "../components/JsonLd";
 import { customHomeProjects } from "../lib/portfolio-data";
@@ -96,6 +100,10 @@ export default function CustomHomesPage() {
       </section>
 
       <GoogleReviews variant="compact" />
+
+      <ConsultBlock lead="Building a custom home in New Brunswick? This is where it starts." />
+      <ReadyChecklist variant="home" />
+      <FaqSection heading="Custom home questions, answered" faqs={customHomesFaq} />
 
       <HelpfulReading
         slugs={[

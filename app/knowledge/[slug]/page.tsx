@@ -7,6 +7,7 @@ import JsonLd from "../../components/JsonLd";
 import { CALCULATOR_URL } from "../../components/CalculatorCta";
 import { articles, getArticle } from "../../lib/articles";
 import { SITE_URL, SITE_NAME } from "../../lib/site";
+import { renderInline, stripLinks } from "../../lib/inline";
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
@@ -25,24 +26,6 @@ export async function generateMetadata({
     description: article.summary,
     alternates: { canonical: `/knowledge/${article.slug}` },
   };
-}
-
-/** Turns [label](url) in plain text into links */
-function renderInline(text: string) {
-  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
-  return parts.map((part, i) => {
-    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-    if (!m) return part;
-    return (
-      <a key={i} href={m[2]} className="font-bold text-accent underline underline-offset-2 hover:opacity-80">
-        {m[1]}
-      </a>
-    );
-  });
-}
-
-function stripLinks(text: string) {
-  return text.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
 }
 
 export default async function ArticlePage({

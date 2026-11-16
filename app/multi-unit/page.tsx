@@ -4,6 +4,10 @@ import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
 import ClosingCTA from "../components/ClosingCTA";
 import HelpfulReading from "../components/HelpfulReading";
+import ConsultBlock from "../components/ConsultBlock";
+import ReadyChecklist from "../components/ReadyChecklist";
+import FaqSection from "../components/FaqSection";
+import { multiUnitFaq } from "../lib/faqs";
 import ProjectGrid from "../components/ProjectGrid";
 import JsonLd from "../components/JsonLd";
 import { multiUnitProjects } from "../lib/portfolio-data";
@@ -116,6 +120,10 @@ export default function MultiUnitPage() {
           <ProjectGrid projects={multiUnitProjects} type="Multi-Unit" />
         </div>
       </section>
+
+      <ConsultBlock lead="Developing a multi-unit project? This is where it starts." />
+      <ReadyChecklist variant="multi-unit" />
+      <FaqSection heading="Multi-unit questions, answered" faqs={multiUnitFaq} />
 
       <HelpfulReading slugs={["multi-unit-developer-guide", "residential-designer-vs-architect"]} />
 

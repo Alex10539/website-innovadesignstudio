@@ -5,6 +5,10 @@ import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
 import ClosingCTA from "../components/ClosingCTA";
 import HelpfulReading from "../components/HelpfulReading";
+import ConsultBlock from "../components/ConsultBlock";
+import ReadyChecklist from "../components/ReadyChecklist";
+import FaqSection from "../components/FaqSection";
+import { processFaq } from "../lib/faqs";
 
 export const metadata: Metadata = {
   title: "Our Design Process | Innova Design Studio, Moncton NB",
@@ -108,6 +112,10 @@ export default function ProcessPage() {
           ))}
         </div>
       </section>
+
+      <ConsultBlock lead="This is the first step in our process, and it is free." />
+      <ReadyChecklist variant="process" />
+      <FaqSection heading="Process questions, answered" faqs={processFaq} />
 
       <HelpfulReading slugs={["design-permitting-timeline", "residential-designer-vs-architect"]} />
 
