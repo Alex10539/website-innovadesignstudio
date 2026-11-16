@@ -3,13 +3,13 @@
 import { useState } from "react";
 import ProjectTile from "./ProjectTile";
 import Lightbox from "./Lightbox";
-import type { ProjectSet } from "../lib/portfolio-data";
+import { projectFacts, type ProjectSet } from "../lib/portfolio-data";
 
 export default function ProjectGrid({
   projects,
   type,
-  className = "grid gap-3 sm:grid-cols-3",
-  aspect = "3/4",
+  className = "grid gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3",
+  aspect = "4/3",
 }: {
   projects: ProjectSet[];
   type: string;
@@ -27,8 +27,9 @@ export default function ProjectGrid({
             type={type}
             image={p.images[0]}
             title={p.title}
+            description={p.description}
+            facts={projectFacts(p)}
             alt={p.alt}
-            location={p.location}
             photoCount={p.images.length}
             aspect={aspect}
             onClick={() => setOpen(p)}
@@ -40,7 +41,8 @@ export default function ProjectGrid({
         onClose={() => setOpen(null)}
         label={open?.alt ?? `${type} project`}
         caption={open?.title}
-        meta={open ? [type, open.location].filter(Boolean).join(" · ") : undefined}
+        description={open?.description}
+        meta={open ? [type, projectFacts(open)].filter(Boolean).join(" · ") : undefined}
       />
     </>
   );

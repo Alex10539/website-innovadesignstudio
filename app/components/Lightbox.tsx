@@ -10,6 +10,7 @@ export default function Lightbox({
   label = "Photo",
   alts,
   caption,
+  description,
   meta,
 }: {
   images: string[] | null;
@@ -20,6 +21,8 @@ export default function Lightbox({
   alts?: string[];
   /** Shown under the photo, e.g. the project title */
   caption?: string;
+  /** One or two sentences about the project, shown under the caption */
+  description?: string;
   /** Smaller line under the caption, e.g. "Custom Home · Timberline" */
   meta?: string;
 }) {
@@ -55,7 +58,7 @@ export default function Lightbox({
       <button
         onClick={onClose}
         aria-label="Close"
-        className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-2xl font-bold text-white hover:bg-white/20 sm:right-6 sm:top-6"
+        className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-2xl font-bold text-white hover:bg-white/20 sm:right-6 sm:top-6"
       >
         ×
       </button>
@@ -132,6 +135,11 @@ export default function Lightbox({
       {(caption || hasMultiple) && (
         <div className="mt-3 text-center" onClick={(e) => e.stopPropagation()}>
           {caption && <div className="font-heading text-base font-bold text-white">{caption}</div>}
+          {description && (
+            <p className="mx-auto mt-1 max-w-xl text-sm leading-relaxed text-white/75">
+              {description}
+            </p>
+          )}
           {meta && (
             <div className="mt-0.5 text-xs font-bold uppercase tracking-widest text-white/60">
               {meta}

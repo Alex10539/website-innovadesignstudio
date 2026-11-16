@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import LeadForm from "./components/LeadForm";
 import CalculatorCta, { CALCULATOR_URL } from "./components/CalculatorCta";
 import GoogleReviews, { RatingBadge } from "./components/GoogleReviews";
+import { customHomeProjects, type ProjectSet } from "./lib/portfolio-data";
 
 const services = [
   {
@@ -25,6 +26,11 @@ const services = [
     image: "/images/portfolio/renovations-1.jpg",
   },
 ];
+
+// Same titles, descriptions, and alt text as the Portfolio cards
+const recentWork = ["timmy", "timberline", "modern-two-storey", "stacy"]
+  .map((id) => customHomeProjects.find((p) => p.id === id))
+  .filter((p): p is ProjectSet => Boolean(p));
 
 const differentiators = [
   {
@@ -224,28 +230,25 @@ export default function Home() {
             View full portfolio →
           </a>
         </div>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-          {[
-            {
-              src: "/images/portfolio/custom-homes-20.jpg",
-              alt: "Modern custom home with a tall glazed gable, vertical wood siding, and a standing-seam metal roof, designed by Innova Design Studio",
-            },
-            {
-              src: "/images/portfolio/custom-homes-52.jpg",
-              alt: "Hillside custom home with white siding, a covered deck, and a large glazed sunroom, designed by Innova Design Studio",
-            },
-            {
-              src: "/images/portfolio/custom-homes-67.jpg",
-              alt: "Modern two-storey custom home with white stone, wood panelling, and tall black-framed windows glowing at dusk, designed by Innova Design Studio",
-            },
-            {
-              src: "/images/portfolio/custom-homes-42.jpg",
-              alt: "Two-story custom home with stone accents and a black metal roof, designed by Innova Design Studio",
-            },
-          ].map((img) => (
-            <div key={img.src} className="relative aspect-[3/4] overflow-hidden bg-cream-200">
-              <Image src={img.src} alt={img.alt} fill sizes="25vw" className="object-cover" />
-            </div>
+        <div className="grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-4">
+          {recentWork.map((proj) => (
+            <a key={proj.id} href="/portfolio" className="group block">
+              <div className="relative aspect-[3/4] overflow-hidden bg-cream-200">
+                <Image
+                  src={proj.images[0]}
+                  alt={proj.alt}
+                  fill
+                  sizes="(min-width: 640px) 25vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <h3 className="mt-3 font-heading text-sm font-bold leading-snug transition-colors group-hover:text-accent">
+                {proj.title}
+              </h3>
+              <p className="mt-1 hidden text-xs leading-relaxed text-ink/60 sm:block">
+                {proj.description}
+              </p>
+            </a>
           ))}
         </div>
       </section>
@@ -261,20 +264,32 @@ export default function Home() {
           {[
             {
               src: "/images/current-builds/build-1.jpg",
-              alt: "Interior view of a home's roof framing during construction",
+              alt: "Interior of a gable-roof home during framing, with large sliding doors and a glazed gable end",
+              caption: "Roof framing, interior",
             },
             {
               src: "/images/current-builds/build-11.jpg",
               alt: "Gable-front home wrapped in house wrap with a tall black-framed window and scaffolding",
+              caption: "Gable-front home, wrapped",
             },
             {
               src: "/images/current-builds/build-7.jpg",
               alt: "Detached garage with grey shingles and white siding on an active job site",
+              caption: "Detached garage, site work",
             },
           ].map((img) => (
-            <div key={img.src} className="relative aspect-[3/4] overflow-hidden">
-              <Image src={img.src} alt={img.alt} fill sizes="25vw" className="object-cover" />
-            </div>
+            <a key={img.src} href="/current-builds" className="group block text-left">
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(min-width: 768px) 25vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <p className="mt-2 text-xs font-bold text-white/80">{img.caption}</p>
+            </a>
           ))}
         </div>
         <a href="/current-builds" className="mt-8 inline-block text-sm font-bold text-white">

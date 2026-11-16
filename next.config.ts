@@ -26,6 +26,10 @@ const nextConfig: NextConfig = {
       { source: "/contactcopy", destination: "/contact", permanent: true },
       { source: "/contact-old", destination: "/contact", permanent: true },
 
+      // Common short URLs for the Renovations page
+      { source: "/renovations", destination: "/renovations-additions", permanent: true },
+      { source: "/renovation", destination: "/renovations-additions", permanent: true },
+
       // Common mistyped URL for the Currently Building page
       { source: "/currently-building", destination: "/current-builds", permanent: true },
 

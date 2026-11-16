@@ -62,7 +62,7 @@ export default function MultiUnitPage() {
         image="/images/portfolio/multi-unit-4.jpg"
         tall
         imagePosition="center 55%"
-        imageAlt="Row of attached multi-unit townhomes with matching gable rooflines, designed by Innova Design Studio"
+        imageAlt="Row of attached multi-unit townhomes with matching gable rooflines"
       />
 
       <section className="mx-auto w-full max-w-2xl px-6 py-24 text-center">

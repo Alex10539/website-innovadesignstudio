@@ -57,7 +57,7 @@ export default function GoogleReviews({
               <div className="text-sm tracking-wider text-amber-500" aria-hidden="true">
                 {STARS}
               </div>
-              <blockquote className="mt-3 text-sm leading-relaxed text-ink/80">
+              <blockquote className="mt-3 whitespace-pre-line text-sm leading-relaxed text-ink/80">
                 &ldquo;{r.text}&rdquo;
               </blockquote>
               <figcaption className="mt-4 text-sm">

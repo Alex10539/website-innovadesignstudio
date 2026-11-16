@@ -168,7 +168,7 @@ export default function CurrentBuildsPage() {
         </p>
         <ProjectFeature
           id="timberline"
-          title="Timberline"
+          title="Timberline hillside home"
           status="Finished"
           description="Hillside views, a black metal roof, glass-railed decks, and a vaulted kitchen with a window wall."
           images={timberlineImages}
@@ -182,7 +182,7 @@ export default function CurrentBuildsPage() {
       <section className="mx-auto w-full max-w-5xl px-6 py-16">
         <ProjectFeature
           id="container-home"
-          title="Custom container home"
+          title="Custom container home on a wooded lot"
           description="A compact container home on a wooded lot — decks and a hot tub gazebo outside, a warm wood-and-black interior inside."
           images={containerImages}
           alts={containerAlts}

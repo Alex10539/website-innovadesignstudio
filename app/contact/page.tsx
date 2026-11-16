@@ -40,7 +40,7 @@ export default function ContactPage() {
           <div className="relative aspect-[4/3] w-full overflow-hidden bg-cream-200">
             <Image
               src="/images/portfolio/custom-homes-57.jpg"
-              alt="Single-storey custom home with a covered front porch, white siding, and a dark metal roof, designed by Innova Design Studio"
+              alt="Single-storey custom home with a covered front porch, white siding, and a dark metal roof"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
               placeholder="blur"
@@ -49,7 +49,7 @@ export default function ContactPage() {
             />
           </div>
           <div>
-            <p className="font-heading text-lg italic leading-relaxed text-terracotta sm:text-xl">
+            <p className="whitespace-pre-line font-heading text-base italic leading-relaxed text-terracotta sm:text-lg">
               &ldquo;{reviews[0].text}&rdquo;
             </p>
             <p className="mt-3 text-sm text-ink/50">— {reviews[0].name}, Google review</p>

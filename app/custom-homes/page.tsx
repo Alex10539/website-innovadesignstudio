@@ -48,7 +48,7 @@ export default function CustomHomesPage() {
         image="/images/portfolio/custom-homes-40.jpg"
         tall
         imagePosition="center 70%"
-        imageAlt="Modern custom home with a wraparound covered deck, designed by Innova Design Studio"
+        imageAlt="Modern custom home with a wraparound covered deck"
       />
 
       <section className="mx-auto w-full max-w-2xl px-6 py-24 text-center">

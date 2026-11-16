@@ -21,7 +21,7 @@ export default function PortfolioPage() {
         image="/images/portfolio/renovations-32.jpg"
         tall
         imagePosition="center 62%"
-        imageAlt="Beachfront home with a dark gabled roof and a glass-enclosed timber pergola, designed by Innova Design Studio"
+        imageAlt="Beachfront home with a dark gabled roof and a glass-enclosed timber pergola"
       />
       <section className="mx-auto w-full max-w-5xl px-6 py-14">
         <PortfolioGrid />

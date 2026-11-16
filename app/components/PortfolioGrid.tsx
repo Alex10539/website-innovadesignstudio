@@ -7,6 +7,7 @@ import {
   customHomeProjects,
   multiUnitProjects,
   renovationProjects,
+  projectFacts,
   type ProjectSet,
 } from "../lib/portfolio-data";
 
@@ -62,17 +63,18 @@ export default function PortfolioGrid() {
           Currently Building →
         </a>
       </div>
-      <div className="columns-1 gap-x-3 sm:columns-2 lg:columns-3">
+      <div className="columns-1 gap-x-5 sm:columns-2 lg:columns-3">
         {shown.map((p, i) => (
-          <div key={p.id} className="mb-3 break-inside-avoid">
+          <div key={p.id} className="mb-10 break-inside-avoid">
             <ProjectTile
               type={p.type}
               image={p.images[0]}
               title={p.title}
+              description={p.description}
+              facts={projectFacts(p)}
               alt={p.alt}
-              location={p.location}
               photoCount={p.images.length}
-              aspect={i % 3 === 0 ? "3/4" : "4/5"}
+              aspect={i % 3 === 0 ? "4/5" : "4/3"}
               onClick={() => setOpen(p)}
             />
           </div>
@@ -83,7 +85,8 @@ export default function PortfolioGrid() {
         onClose={() => setOpen(null)}
         label={open?.alt ?? "Project"}
         caption={open?.title}
-        meta={open ? [open.type, open.location].filter(Boolean).join(" · ") : undefined}
+        description={open?.description}
+        meta={open ? [open.type, projectFacts(open)].filter(Boolean).join(" · ") : undefined}
       />
     </div>
   );

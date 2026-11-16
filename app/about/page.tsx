@@ -20,7 +20,7 @@ export default function AboutPage() {
         title="About Innova"
         subtitle="A residential design studio built around one idea — a great home shouldn't get stuck in permitting."
         image="/images/portfolio/custom-homes-38.jpg"
-        imageAlt="Bright open-concept living and dining space with a vaulted wood ceiling, designed by Innova Design Studio"
+        imageAlt="Bright open-concept living and dining space with a vaulted wood ceiling"
       />
 
       <section className="mx-auto w-full max-w-4xl px-6 py-24">
