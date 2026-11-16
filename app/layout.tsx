@@ -30,6 +30,9 @@ const nunito = Nunito_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  // Every page names itself, on the www address, as the preferred version. The site answers on both
+  // www and non-www, so this keeps Google from treating them as two copies of every page.
+  alternates: { canonical: "./" },
   title: "Custom Home Designer in Moncton, Saint John & Fredericton, NB | Innova Design Studio",
   description:
     "Custom homes, multi-unit buildings, and renovations designed in Moncton, Dieppe, Riverview, Shediac, Saint John, and Fredericton, NB. Permit-ready design from Innova Design Studio. Book a free consult.",
