@@ -24,8 +24,8 @@ export default function Footer() {
       <div className="mx-auto max-w-3xl text-center text-xs leading-relaxed text-ink/60">
         <p>
           © Innova<span className="text-accent">.</span> Design Studio — Custom home,
-          multi-unit, and renovation design in Moncton, Dieppe, Riverview, and Shediac, New
-          Brunswick.
+          multi-unit, and renovation design in Moncton, Dieppe, Riverview, Shediac, Saint John,
+          and Fredericton, across New Brunswick and Atlantic Canada.
         </p>
         <p className="mt-2">
           <a href="tel:5063004380" className="hover:text-accent">

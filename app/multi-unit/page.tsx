@@ -3,15 +3,16 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
 import ClosingCTA from "../components/ClosingCTA";
+import HelpfulReading from "../components/HelpfulReading";
 import ProjectGrid from "../components/ProjectGrid";
 import JsonLd from "../components/JsonLd";
 import { multiUnitProjects } from "../lib/portfolio-data";
 import { SITE_URL, SITE_NAME } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: "Multi-Unit Building Design in Moncton, NB | Innova Design Studio",
+  title: "Multi-Unit Building Design in New Brunswick | Innova Design Studio",
   description:
-    "Multi-unit design and approvals for developers in Moncton, Dieppe, and Riverview, NB. Innova Design Studio guides your project from concept to permit.",
+    "Multi-unit design and approvals for developers in Moncton, Saint John, Fredericton, Dieppe, and Riverview, NB. Innova Design Studio guides your project from concept to permit.",
 };
 
 const serviceJsonLd = {
@@ -115,6 +116,8 @@ export default function MultiUnitPage() {
           <ProjectGrid projects={multiUnitProjects} type="Multi-Unit" />
         </div>
       </section>
+
+      <HelpfulReading slugs={["multi-unit-developer-guide", "residential-designer-vs-architect"]} />
 
       <ClosingCTA
         heading="Planning a multi-unit development?"

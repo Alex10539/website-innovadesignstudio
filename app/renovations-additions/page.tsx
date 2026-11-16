@@ -10,9 +10,9 @@ import { renovationProjects } from "../lib/portfolio-data";
 import { SITE_URL, SITE_NAME } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: "Renovations and Additions in Moncton, NB | Innova Design Studio",
+  title: "Renovations and Additions in Moncton, Saint John & Fredericton, NB | Innova Design Studio",
   description:
-    "Renovations and additions for older New Brunswick homes, designed to current bylaws in Moncton, Dieppe, Riverview, and Shediac. Book a free consult.",
+    "Renovations and additions for older New Brunswick homes, designed to current bylaws in Moncton, Saint John, Fredericton, Dieppe, Riverview, and Shediac. Book a free consult.",
 };
 
 const serviceJsonLd = {

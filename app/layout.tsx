@@ -18,9 +18,9 @@ const nunito = Nunito_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Custom Home Designer in Moncton, NB | Innova Design Studio",
+  title: "Custom Home Designer in Moncton, Saint John & Fredericton, NB | Innova Design Studio",
   description:
-    "Custom homes, multi-unit buildings, and renovations designed in Moncton, Dieppe, Riverview, and Shediac. Permit-ready design from Innova Design Studio. Book a free consult.",
+    "Custom homes, multi-unit buildings, and renovations designed in Moncton, Dieppe, Riverview, Shediac, Saint John, and Fredericton, NB. Permit-ready design from Innova Design Studio. Book a free consult.",
 };
 
 const localBusinessJsonLd = {
@@ -36,6 +36,8 @@ const localBusinessJsonLd = {
     { "@type": "City", name: "Dieppe" },
     { "@type": "City", name: "Riverview" },
     { "@type": "City", name: "Shediac" },
+    { "@type": "City", name: "Saint John" },
+    { "@type": "City", name: "Fredericton" },
     { "@type": "AdministrativeArea", name: "New Brunswick" },
   ],
   address: {

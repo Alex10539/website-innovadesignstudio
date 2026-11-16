@@ -228,6 +228,218 @@ export const articles: Article[] = [
     },
     related: ["moncton-permit-process", "custom-home-cost-new-brunswick"],
   },
+  {
+    slug: "residential-designer-vs-architect",
+    title: "What does a residential designer do vs. an architect?",
+    summary:
+      "Residential designer vs. architect in New Brunswick: what each one does, when you need an architect, and when a building designer is the right fit for your home.",
+    category: "Process",
+    image: "/images/portfolio/custom-homes-58.jpg",
+    imageAlt:
+      "Single-storey custom home with gabled rooflines, timber truss details, stone accents, and an attached two-car garage",
+    blocks: [
+      {
+        type: "p",
+        text: "If you are building a custom home in New Brunswick, you will hear two titles: residential designer and architect. They are not the same job, and picking the right one saves you time and money.",
+      },
+      { type: "h2", text: "What a residential designer does." },
+      {
+        type: "p",
+        text: "A residential designer designs homes and small multi-unit buildings, from concept and mood boards, through construction drawings, to permitting and contractor coordination. At Innova, that means we guide your project A to Z: we check the lot and bylaws first, design the home around how you live, prepare the permit-ready drawings, and help coordinate with your contractor and engineer. We do not just draw lines. We design a home that can actually be built and approved. You can see how that works in our [design process](/process).",
+      },
+      { type: "h2", text: "What an architect does." },
+      {
+        type: "p",
+        text: "An architect does similar work, with a different scope and licence. In New Brunswick, larger and more complex buildings generally need an architect. That includes buildings that fall under Part 3 of the National Building Code, such as buildings over three storeys or over 600 square metres in building area, and buildings with complex structure or occupancy. An architect stamps those drawings and takes responsibility for them under their licence.",
+      },
+      {
+        type: "h2",
+        text: "When do you need an architect, and when is a designer the right fit?",
+      },
+      {
+        type: "p",
+        text: "For most custom homes, duplexes, four-plexes, and small multi-unit buildings under Part 9 of the National Building Code, a residential designer is the right fit. That is Innova's work: [custom homes](/custom-homes), multi-unit up to the Part 9 limit, and renovations and additions. If your project is Part 3, or if the city or an engineer tells you it needs an architect's stamp, we will tell you that on the first call, and we will help you get to the right professional. We do not take on work that needs a stamp we cannot give.",
+      },
+      { type: "h2", text: "Do designers and architects work together?" },
+      {
+        type: "p",
+        text: "Yes, often. On a larger project, Innova can design with an architect or engineer who stamps the parts that need it. On a Part 9 home, we work directly with your contractor, your engineer for structure where needed, and the city, with no extra layer in between.",
+      },
+      { type: "h2", text: "How to choose." },
+      {
+        type: "p",
+        text: "Ask three questions. First, is my building Part 9 or Part 3? Second, has the city or my lender asked for an architect's stamp? Third, do I want a designer who will stay with the project from concept through permitting and construction, or do I only need drawings? If you are building a custom home in Moncton, Saint John, Fredericton, Dieppe, Riverview, or Shediac, and it is a Part 9 home, start with a designer. Book a free consult and we will tell you honestly if you need an architect instead.",
+      },
+      {
+        type: "p",
+        text: "Not sure what the city will ask for? Read [the Moncton permit process, step by step](/knowledge/moncton-permit-process).",
+      },
+    ],
+    faq: [
+      {
+        q: "Can a residential designer design my custom home in New Brunswick?",
+        a: "Yes, for most Part 9 homes. Innova designs custom homes, small multi-unit buildings, and renovations to that standard.",
+      },
+      {
+        q: "When do I need an architect in New Brunswick?",
+        a: "For Part 3 buildings, larger multi-unit projects, and any project where the city, lender, or engineer requires an architect's stamp.",
+      },
+      {
+        q: "Will Innova tell me if I need an architect?",
+        a: "Yes, on the first call. If your project needs a stamp we cannot give, we will say so and point you to the right professional.",
+      },
+    ],
+    cta: {
+      heading: "Not sure which one you need?",
+      body: "Book a free consult, no obligation. Tell us about your lot and your project in Moncton, Saint John, Fredericton, or anywhere in New Brunswick, and we will tell you the right path.",
+    },
+    related: ["moncton-permit-process", "multi-unit-developer-guide"],
+  },
+  {
+    slug: "multi-unit-developer-guide",
+    title: "What developers should know before starting a multi-unit project",
+    summary:
+      "Starting a multi-unit project in New Brunswick? Zoning, parking, barrier-free, energy, and permitting: what developers should check before they design.",
+    category: "Multi-Unit",
+    image: "/images/portfolio/multi-unit-13.jpg",
+    imageAlt:
+      "Three-storey brick multi-unit residential building with dormer windows, a covered entry, and black vertical siding on one wing",
+    blocks: [
+      {
+        type: "p",
+        text: "A multi-unit project in New Brunswick is not a bigger custom home. It is a different job, with different rules, and the mistakes cost more because they are multiplied across every unit.",
+      },
+      { type: "p", text: "Here is what to check before you design." },
+      { type: "h2", text: "1. Zoning and density first, design second." },
+      {
+        type: "p",
+        text: "Check what your lot is zoned for, how many units it allows, height, lot coverage, and setbacks. In Moncton, Saint John, Fredericton, Dieppe, and Riverview, the rules are local, and they change by zone. A site that fits 12 units on paper can fit 8 once parking and setbacks are counted. Parking is often the real constraint, not the building.",
+      },
+      { type: "h2", text: "2. Parking, access, and servicing." },
+      {
+        type: "p",
+        text: "Count parking early, not after the design is done. Check access, fire access, servicing, and stormwater. A unit mix that looks good on a floor plan can fail on parking alone, and a redesign at that point costs weeks.",
+      },
+      { type: "h2", text: "3. Unit mix and barrier-free." },
+      {
+        type: "p",
+        text: "Decide the unit mix with the market and the code together. How many one-bed, two-bed, and three-bed units, and how many barrier-free units are required? For multi-unit buildings, barrier-free access is not an add-on. It shapes entrances, corridors, unit layouts, and parking, and it needs to be in the design from the start.",
+      },
+      { type: "h2", text: "4. Energy and funding." },
+      {
+        type: "p",
+        text: "If you are chasing funding, energy targets matter. Programs like CMHC MLI Select score affordability and energy efficiency, and the points change the design: insulation, windows, systems, and unit mix all feed the score. Tell your designer your funding target early, so the design is scored as it is drawn, not retrofitted after.",
+      },
+      { type: "h2", text: "5. Permit package, not just drawings." },
+      {
+        type: "p",
+        text: "A multi-unit permit needs a complete package: drawings, site plan, grading, energy forms, specs, and often consultant input. Incomplete first submissions are the most common delay. At Innova, we design [multi-unit projects](/multi-unit) to that standard from the start, and we coordinate with your engineer, contractor, and the city through the process. See [the Moncton permit process, step by step](/knowledge/moncton-permit-process) for how the city reviews a package.",
+      },
+      { type: "h2", text: "What developers ask us most." },
+      {
+        type: "p",
+        text: "How many units can I fit on this lot? What will the city ask for? How long will permitting take? The honest answer to all three is: it depends on the lot, the zone, and how complete the first submission is. Bring us the lot and your target unit count early, and we will tell you what is realistic before you pay for a full design.",
+      },
+      {
+        type: "p",
+        text: "Not sure whether your building needs an architect? Read [residential designer vs. architect](/knowledge/residential-designer-vs-architect).",
+      },
+    ],
+    faq: [
+      {
+        q: "How many units can I build on my lot in Moncton?",
+        a: "It depends on zoning, parking, setbacks, and servicing for that lot. We check those before we design.",
+      },
+      {
+        q: "Do I need an architect for a multi-unit project?",
+        a: "It depends on size and code. Most small multi-unit buildings under Part 9 can be designed by a residential designer. Larger Part 3 buildings need an architect. We will tell you which one applies on the first call.",
+      },
+      {
+        q: "What slows multi-unit permits down most?",
+        a: "Incomplete first submissions, parking shortfalls, barrier-free gaps, and missing energy forms. Those are the items we check in our pre-submission review.",
+      },
+    ],
+    cta: {
+      heading: "Developing in Moncton, Saint John, Fredericton, or anywhere in New Brunswick?",
+      body: "Book a free consult, no obligation. Bring your lot and your unit target, and we will tell you what the city will ask for and what to have ready.",
+    },
+    related: ["moncton-permit-process", "residential-designer-vs-architect"],
+  },
+  {
+    slug: "design-permitting-timeline",
+    title: "Design + permitting timeline: what to expect start to finish",
+    summary:
+      "How long does custom home design and permitting take in New Brunswick? A step-by-step timeline, from first consult to permit-ready drawings.",
+    category: "Process",
+    image: "/images/portfolio/custom-homes-67.jpg",
+    imageAlt:
+      "Modern two-storey custom home with white stone, wood panelling, and tall black-framed windows glowing at dusk",
+    blocks: [
+      {
+        type: "p",
+        text: "How long will this take? It is the second question every client asks, after cost. Here is the timeline, start to finish, and what makes it faster or slower. It follows our [six-phase design process](/process).",
+      },
+      { type: "h2", text: "Phase 1: First consult and lot check." },
+      {
+        type: "p",
+        text: "You book a free consult. We review your lot, your goals, your size, and your budget range, and we tell you what the design will need and what to have ready. This is also where we lock in the design scope on the call. If your lot has a zoning or servicing issue, you will hear it here, not after you have paid for drawings.",
+      },
+      { type: "h2", text: "Phase 2: Concept and preliminaries." },
+      {
+        type: "p",
+        text: "We check the bylaw and sun path, work through styles and mood boards, and design the concept around how you live. This is the preliminaries milestone, where the two biggest questions get answered: what will it cost to build, and will this design get approved and built? A clear concept here saves redesign later.",
+      },
+      { type: "h2", text: "Phase 3: Construction drawings." },
+      {
+        type: "p",
+        text: "We turn the concept into permit-ready construction drawings: floor plans, elevations, sections, foundation, framing, and details. We also prepare the site plan and coordinate with your engineer and contractor where needed. This is the longest phase, and it is where completeness matters most. A rushed set with missing details does not save time. It creates a second round at permit.",
+      },
+      { type: "h2", text: "Phase 4: Pre-submission check." },
+      {
+        type: "p",
+        text: "Before we submit, we check the package against the city's checklist: zoning, code, energy, barrier-free where it applies, and site and grading plans. This is the step most owner-submitted packages skip, and it is the step that prevents the most common permit delays.",
+      },
+      { type: "h2", text: "Phase 5: Permit submission and city review." },
+      {
+        type: "p",
+        text: "We submit, the city reviews, and we answer any questions in full, with revised drawings where needed. A complete first submission moves faster than a fast submission with a missing piece. See [the Moncton permit process, step by step](/knowledge/moncton-permit-process) for what the city checks.",
+      },
+      { type: "h2", text: "Phase 6: Permit issued, build to the drawings." },
+      {
+        type: "p",
+        text: "Once the permit is issued, you build to the approved drawings. Changes on site need to match the approved set, or they need a revision.",
+      },
+      { type: "h2", text: "What makes it faster?" },
+      {
+        type: "p",
+        text: "A clear lot check early, a decided concept before construction drawings start, a complete first submission, and fast answers when the city asks a question. What makes it slower? A lot issue found late, a concept that changes mid-drawings, an incomplete package, and partial answers to the city.",
+      },
+      { type: "h2", text: "How long, in total?" },
+      {
+        type: "p",
+        text: "It depends on the size and complexity of your home, on the lot, and on the city review. A small [custom home](/custom-homes) moves faster than a multi-unit building. We will give you a timeline for your project on the free consult, once we have seen your lot and your scope. We will not promise a date we cannot keep.",
+      },
+    ],
+    faq: [
+      {
+        q: "How long does a custom home design take in New Brunswick?",
+        a: "It depends on size, complexity, and lot. We give you a timeline for your project on the free consult.",
+      },
+      {
+        q: "What is the slowest part?",
+        a: "Usually the permit review after submission, and any redesign caused by a lot or bylaw issue found late. Finding those early is the fastest thing you can do.",
+      },
+      {
+        q: "Can I speed it up?",
+        a: "Yes: bring your lot early, decide the concept before construction drawings, and answer city questions in full the first time.",
+      },
+    ],
+    cta: {
+      heading: "Want a timeline for your project?",
+      body: "Book a free consult, no obligation. Bring your lot and your goals, in Moncton, Saint John, Fredericton, or anywhere in New Brunswick, and we will walk through the steps and the timing together.",
+    },
+    related: ["moncton-permit-process", "custom-home-cost-new-brunswick"],
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {

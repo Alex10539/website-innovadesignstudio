@@ -69,11 +69,12 @@ export default function AboutPage() {
       <section className="mx-auto w-full max-w-2xl px-6 py-24 text-center">
         <h2 className="font-heading text-2xl font-bold">Where we work</h2>
         <p className="mt-5 leading-relaxed text-ink/70">
-          We are based in New Brunswick and work across Moncton, Dieppe, Riverview, Shediac,
-          and surrounding communities. Most of our projects are custom homes and multi-unit
-          buildings in the Greater Moncton area, plus renovations and additions on older New
-          Brunswick homes. If you are building or renovating here, we already know the lot, the
-          bylaw, and the permit path you are on.
+          We are based in New Brunswick and work across the province. Most of our projects are
+          custom homes and multi-unit buildings in the Greater Moncton area — Moncton, Dieppe,
+          Riverview, and Shediac — plus renovations and additions on older New Brunswick homes.
+          We also design in Saint John and Fredericton, and in communities across New Brunswick
+          and Atlantic Canada. If you are building or renovating anywhere in New Brunswick, we
+          already know the lot, the bylaw, and the permit path you are on.
         </p>
       </section>
 

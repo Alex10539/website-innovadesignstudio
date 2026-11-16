@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
 import ClosingCTA from "../components/ClosingCTA";
+import HelpfulReading from "../components/HelpfulReading";
 
 export const metadata: Metadata = {
   title: "Our Design Process | Innova Design Studio, Moncton NB",
@@ -107,6 +108,8 @@ export default function ProcessPage() {
           ))}
         </div>
       </section>
+
+      <HelpfulReading slugs={["design-permitting-timeline", "residential-designer-vs-architect"]} />
 
       <ClosingCTA
         heading="Start your project with confidence."

@@ -12,9 +12,9 @@ import { customHomeProjects } from "../lib/portfolio-data";
 import { SITE_URL, SITE_NAME } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: "Custom Home Design in Moncton, NB | Innova Design Studio",
+  title: "Custom Home Design in Moncton, Saint John & Fredericton, NB | Innova Design Studio",
   description:
-    "Ground-up custom home design in Moncton and across New Brunswick, from concept to permit-ready drawings. Book a free consult with Innova Design Studio.",
+    "Ground-up custom home design in Moncton, Saint John, Fredericton, and across New Brunswick, from concept to permit-ready drawings. Book a free consult.",
 };
 
 const serviceJsonLd = {
@@ -97,7 +97,14 @@ export default function CustomHomesPage() {
 
       <GoogleReviews variant="compact" />
 
-      <HelpfulReading slugs={["moncton-permit-process", "custom-home-cost-new-brunswick"]} />
+      <HelpfulReading
+        slugs={[
+          "moncton-permit-process",
+          "custom-home-cost-new-brunswick",
+          "residential-designer-vs-architect",
+          "design-permitting-timeline",
+        ]}
+      />
 
       <ClosingCTA
         heading="Ready to design your custom home?"

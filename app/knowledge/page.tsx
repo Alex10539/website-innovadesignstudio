@@ -11,22 +11,6 @@ export const metadata: Metadata = {
     "Straight answers to the questions people ask us most before starting a custom home, multi-unit, or renovation project in Atlantic Canada.",
 };
 
-// Planned articles that are not written yet
-const comingSoon = [
-  {
-    title: "What does a residential designer do vs. an architect?",
-    brief: "Clarifying a commonly-asked comparison question for people weighing their options.",
-  },
-  {
-    title: "What developers should know before starting a multi-unit project",
-    brief: "Density, zoning, and approval risk — the developer-focused version.",
-  },
-  {
-    title: "Design + permitting timeline: what to expect start to finish",
-    brief: "Walks through our 6-phase process with realistic timeframes attached to each phase.",
-  },
-];
-
 export default function KnowledgePage() {
   return (
     <>
@@ -52,15 +36,6 @@ export default function KnowledgePage() {
                 Read the article →
               </span>
             </a>
-          ))}
-          {comingSoon.map((a) => (
-            <div key={a.title} className="py-6">
-              <h2 className="font-heading font-bold">{a.title}</h2>
-              <p className="mt-1 text-sm text-ink/70">{a.brief}</p>
-              <span className="mt-2 inline-block text-xs italic text-ink/40">
-                Full article coming soon
-              </span>
-            </div>
           ))}
         </div>
       </section>

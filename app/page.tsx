@@ -138,9 +138,11 @@ export default function Home() {
           </h2>
           <p className="mt-5 leading-relaxed text-ink/70">
             Innova Design Studio designs custom homes, multi-unit buildings, and renovations in
-            Moncton, Dieppe, Riverview, and Shediac, and across New Brunswick. We know the local
-            bylaws, the permit offices, and what actually gets approved here, so your design is
-            permit-ready, not just pretty on paper.
+            Moncton, Dieppe, Riverview, and Shediac, and in Saint John and Fredericton, across
+            New Brunswick and Atlantic Canada. We are based in the Greater Moncton area and work
+            across the province, so whether your lot is in Moncton, Saint John, Fredericton, or
+            a smaller community in between, we know the local bylaws, the permit offices, and
+            what actually gets approved here.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
             <a

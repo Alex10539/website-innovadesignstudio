@@ -8,9 +8,9 @@ import Footer from "../components/Footer";
 import LeadForm from "../components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Book a Free Consult | Innova Design Studio, Moncton NB",
+  title: "Book a Free Consult | Innova Design Studio, New Brunswick",
   description:
-    "Book a free consult with Innova Design Studio in Moncton, NB. Custom homes, multi-unit, and renovations. We reply within 1 business day.",
+    "Book a free consult with Innova Design Studio. Custom homes, multi-unit, and renovations in Moncton, Saint John, Fredericton, and across New Brunswick. We reply within 1 business day.",
 };
 
 export default function ContactPage() {
@@ -31,11 +31,12 @@ export default function ContactPage() {
           </p>
           <div className="mx-auto mt-10 max-w-xl border-y border-white/15 py-8">
             <h2 className="font-heading text-xl font-bold text-white">
-              Serving Greater Moncton and New Brunswick
+              Serving Moncton, Saint John, Fredericton, and all of New Brunswick
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-white/75">
-              We design in Moncton, Dieppe, Riverview, Shediac, and across New Brunswick. Tell us
-              your town in the form below, and we will come back to you within 1 business day.
+              We design in Moncton, Dieppe, Riverview, Shediac, Saint John, Fredericton, and
+              across New Brunswick and Atlantic Canada. Tell us your town in the form below, and
+              we will come back to you within 1 business day.
               Prefer to talk first? Call{" "}
               <a href="tel:5063004380" className="font-bold text-white underline">
                 506-300-4380
