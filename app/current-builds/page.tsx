@@ -40,7 +40,7 @@ const alts = [
   "Interior wall framing with a plastic-wrapped window and a snow shovel on a winter job site",
   "Top-down aerial of a snow-covered roof being sheathed",
   "Teal front door on a small home wrapped in house wrap in winter",
-  "Aerial view of a custom home build with a gabled roof in autumn woods, with vehicles on site",
+  "Aerial view of a custom home build in Salisbury with a gabled roof in autumn woods, with vehicles on site",
 ];
 
 // ---- Timberline (finished) -------------------------------------------------
@@ -155,7 +155,7 @@ export default function CurrentBuildsPage() {
           id="job-sites"
           title="Active job sites"
           status="On site"
-          description="Framing, house wrap, windows, and roofs across our active builds — the work as it happens."
+          description="Framing, house wrap, windows, and roofs across our job sites, including a custom home build in Salisbury. The work as it happens."
           images={images}
           alts={alts}
           preview={[12, 4, 3]}
@@ -183,6 +183,7 @@ export default function CurrentBuildsPage() {
         <ProjectFeature
           id="container-home"
           title="Custom container home on a wooded lot"
+          status="Finished"
           description="A compact container home on a wooded lot — decks and a hot tub gazebo outside, a warm wood-and-black interior inside."
           images={containerImages}
           alts={containerAlts}
