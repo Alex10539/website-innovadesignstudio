@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { Rubik, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import JsonLd from "./components/JsonLd";
+import Tracking from "./components/Tracking";
 import { SITE_URL, SITE_NAME, SITE_PHONE, SITE_EMAIL, GTM_ID } from "./lib/site";
+
+// Tag Manager only loads in production builds, so running the site on a computer (next dev)
+// never sends test visits or test events to the real Google Analytics.
+const loadGtm = process.env.NODE_ENV === "production";
 
 // Standard Google Tag Manager head snippet
 const gtmHeadScript = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -66,18 +71,21 @@ export default function RootLayout({
       className={`${rubik.variable} ${nunito.variable} h-full antialiased`}
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: gtmHeadScript }} />
+        {loadGtm && <script dangerouslySetInnerHTML={{ __html: gtmHeadScript }} />}
       </head>
       <body className="min-h-full flex flex-col">
         {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
+        {loadGtm && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        )}
+        <Tracking />
         {children}
         <JsonLd data={localBusinessJsonLd} />
       </body>

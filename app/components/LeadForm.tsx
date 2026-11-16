@@ -1,8 +1,25 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { getAttribution } from "../lib/attribution";
+import { track, pageName } from "../lib/analytics";
 
 type Status = "idle" | "submitting" | "success" | "error";
+
+// Which service the visitor is asking about, from the two project dropdowns
+function serviceFor(d: Record<string, unknown>): string {
+  const property = String(d.propertyType ?? "");
+  const project = String(d.projectType ?? "");
+  if (property === "Apartment") return "multi_unit";
+  if (project === "Renovation" || project === "Addition") return "renovations";
+  if (project === "New Construction" && property === "Residential") return "custom_homes";
+  return "unknown";
+}
+
+function formLocation(): string {
+  const p = pageName();
+  return p === "homepage" ? "homepage" : p === "/contact" ? "contact" : p;
+}
 
 export default function LeadForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -18,9 +35,16 @@ export default function LeadForm() {
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        // Where this lead came from (UTM, referrer, page) rides along in the same object
+        body: JSON.stringify({ ...data, ...getAttribution() }),
       });
       if (!res.ok) throw new Error("Submission failed");
+      // Fires once, only after the server accepted the lead. Never includes name, email, or phone.
+      track("generate_lead", {
+        form_location: formLocation(),
+        service: serviceFor(data),
+        town: String(data.region ?? "").trim().slice(0, 60),
+      });
       setStatus("success");
       form.reset();
     } catch {

@@ -32,6 +32,27 @@ const CLOSE_FIELDS = {
   region: "cf_EV2b6tNcdu8xmkcNRx1ZD91Q5EOJzBuT5bmYQ8um0oy",
 };
 
+// Where the lead came from. Added by the form in the browser, stored inside the portal
+// submission's `data` JSON. They are not used by the email, Close, or Notion steps.
+const ATTRIBUTION_KEYS = [
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "page",
+  "referrer",
+  "submitted_at_page",
+  "gclid",
+] as const;
+
+function cleanAttribution(data: Record<string, unknown>) {
+  const out: Record<string, string> = {};
+  for (const k of ATTRIBUTION_KEYS) {
+    const v = data[k];
+    if (typeof v === "string" && v.trim()) out[k] = v.trim().slice(0, 500);
+  }
+  return out;
+}
+
 type LeadData = {
   name?: string;
   email?: string;
@@ -202,7 +223,13 @@ async function sendToPortal(data: LeadData) {
   const res = await fetch(`${url.replace(/\/$/, "")}/api/submissions`, {
     method: "POST",
     headers: { "content-type": "application/json", "x-portal-secret": secret },
-    body: JSON.stringify({ source: "consult_form", name: data.name, email: data.email, phone: data.phone, data }),
+    body: JSON.stringify({
+      source: "consult_form",
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      data: { ...data, ...cleanAttribution(data as Record<string, unknown>) },
+    }),
   });
   if (!res.ok) throw new Error(`Portal responded ${res.status}`);
   return { ok: true };
