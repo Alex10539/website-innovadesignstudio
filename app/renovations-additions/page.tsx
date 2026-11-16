@@ -111,8 +111,11 @@ export default function RenovationsPage() {
         </div>
       </section>
 
-      <ConsultBlock lead="Renovating or adding to your home? This is where it starts." />
-      <ReadyChecklist variant="home" />
+      <ConsultBlock
+        lead="Renovating or adding to your home? This is where it starts."
+        variant="renovations"
+      />
+      <ReadyChecklist variant="renovations" />
       <FaqSection heading="Renovation questions, answered" faqs={renovationsFaq} />
 
       <HelpfulReading slugs={["renovating-older-home-new-brunswick", "moncton-permit-process"]} />

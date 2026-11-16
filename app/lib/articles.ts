@@ -223,7 +223,7 @@ export const articles: Article[] = [
       },
     ],
     cta: {
-      heading: "Renovating in Moncton, Dieppe, Riverview, or Shediac?",
+      heading: "Renovating in Moncton, Dieppe, Riverview, Shediac, Saint John, or Fredericton?",
       body: "Book a free consult, no obligation. Bring your ideas and your lot, and we will tell you what the bylaws allow and what to have ready.",
     },
     related: ["moncton-permit-process", "custom-home-cost-new-brunswick"],

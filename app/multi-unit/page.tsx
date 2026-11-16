@@ -121,7 +121,10 @@ export default function MultiUnitPage() {
         </div>
       </section>
 
-      <ConsultBlock lead="Developing a multi-unit project? This is where it starts." />
+      <ConsultBlock
+        lead="Developing a multi-unit project? This is where it starts."
+        variant="multi-unit"
+      />
       <ReadyChecklist variant="multi-unit" />
       <FaqSection heading="Multi-unit questions, answered" faqs={multiUnitFaq} />
 

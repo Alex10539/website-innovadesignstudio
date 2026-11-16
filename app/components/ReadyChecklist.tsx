@@ -1,4 +1,4 @@
-type Variant = "home" | "multi-unit" | "process";
+type Variant = "home" | "multi-unit" | "renovations" | "process";
 
 const content: Record<Variant, { intro?: string; items?: string[]; copy?: string }> = {
   home: {
@@ -9,6 +9,17 @@ const content: Record<Variant, { intro?: string; items?: string[]; copy?: string
       "Rough size in mind, bedrooms and bathrooms, one storey or two",
       "Photos or a list of homes you like, if you have them",
       "Your build budget range, if you know it, or use the Home Cost Calculator before the call",
+      "Your timeline, if you have one, and who else is deciding with you",
+    ],
+  },
+  renovations: {
+    intro: "You do not need a finished plan to book. Bring what you have, and we will work from there.",
+    items: [
+      "Your lot address or civic address, and your town",
+      "Photos of the home, inside and out, and what you want to change",
+      "Any survey, site plan, or existing drawings you already have",
+      "Whether it is an addition, a layout change, a kitchen move, or a second storey",
+      "Your build budget range, if you know it",
       "Your timeline, if you have one, and who else is deciding with you",
     ],
   },

@@ -1,14 +1,45 @@
-const produces = [
-  "A lot and bylaw check for your town, in Moncton, Saint John, Fredericton, Dieppe, Riverview, Shediac, or anywhere in New Brunswick. We tell you what your lot allows, and what it does not.",
-  "What your permit will need. We tell you the drawings, site plan, and details the city will ask for, before you pay for a full design.",
-  "A clear direction on size, layout, and finishes, matched to how you live and what you want to spend to build.",
-  "A build-cost range from the Home Cost Calculator, refined on the call for your size and finishes. That is a build cost range, a starting point, not a quote.",
-  "Your design scope and fee, locked in on the call. We do not publish design fees on the website. On the call, we agree the scope together and lock in the fee, so you know exactly what you are getting and what it costs before you commit.",
-  "Your next steps, in order, with what to have ready and what happens next.",
-];
+const FEE_LINE =
+  "Your design scope and fee, locked in on the call. We do not publish design fees on the website. On the call, we agree the scope together and lock in the fee, so you know exactly what you are getting and what it costs before you commit.";
+const NEXT_STEPS = "Your next steps, in order, with what to have ready and what happens next.";
 
-/** "What your free consult produces". Same block on every service page; only the lead line changes. */
-export default function ConsultBlock({ lead }: { lead: string }) {
+type Variant = "home" | "multi-unit" | "renovations";
+
+// Custom Homes and Process use "home". Multi-Unit and Renovations have their own lists.
+const lists: Record<Variant, string[]> = {
+  home: [
+    "A lot and bylaw check for your town, in Moncton, Saint John, Fredericton, Dieppe, Riverview, Shediac, or anywhere in New Brunswick. We tell you what your lot allows, and what it does not.",
+    "What your permit will need. We tell you the drawings, site plan, and details the city will ask for, before you pay for a full design.",
+    "A clear direction on size, layout, and finishes, matched to how you live and what you want to spend to build.",
+    "A build-cost range from the Home Cost Calculator, refined on the call for your size and finishes. That is a build cost range, a starting point, not a quote.",
+    FEE_LINE,
+    NEXT_STEPS,
+  ],
+  "multi-unit": [
+    "A lot, zoning, and density check for your town, in Moncton, Saint John, Fredericton, Dieppe, Riverview, Shediac, or anywhere in New Brunswick. We tell you what your lot allows, how many units it can hold, and what parking will allow.",
+    "What your permit will need. We tell you the drawings, site plan, energy forms, and consultant input the city will ask for, before you pay for a full design.",
+    "A clear direction on unit mix and barrier-free requirements, matched to your market and your funding target.",
+    FEE_LINE,
+    NEXT_STEPS,
+  ],
+  renovations: [
+    "A lot and bylaw check for your town, in Moncton, Saint John, Fredericton, Dieppe, Riverview, Shediac, or anywhere in New Brunswick. We tell you what your lot allows for an addition or a layout change.",
+    "What your permit will need. We tell you whether your renovation needs a permit, and what drawings the city will ask for, before you pay for a full design.",
+    "A clear direction on what to keep, what to change, and what structure and services will need attention in an older home.",
+    "A build-cost range for your renovation, refined on the call for your scope. That is a build cost range, a starting point, not a quote.",
+    FEE_LINE,
+    NEXT_STEPS,
+  ],
+};
+
+/** "What your free consult produces". Same block on every service page; the lead line and list vary. */
+export default function ConsultBlock({
+  lead,
+  variant = "home",
+}: {
+  lead: string;
+  variant?: Variant;
+}) {
+  const produces = lists[variant];
   return (
     <section className="border-y border-cream-300 bg-cream-100 px-6 py-20 sm:py-24">
       <div className="mx-auto max-w-3xl">
