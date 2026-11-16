@@ -30,8 +30,8 @@ const nunito = Nunito_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  // Every page names itself, on the www address, as the preferred version. The site answers on both
-  // www and non-www, so this keeps Google from treating them as two copies of every page.
+  // Every page names itself, on the non-www address, as the preferred version. www redirects here
+  // (next.config.ts); this keeps Google from treating the two addresses as separate copies.
   alternates: { canonical: "./" },
   title: "Custom Home Designer in Moncton, Saint John & Fredericton, NB | Innova Design Studio",
   description:

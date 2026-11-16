@@ -10,6 +10,16 @@ const nextConfig: NextConfig = {
   // sitemap.xml (see seo/seo-audit.md).
   async redirects() {
     return [
+      // www -> non-www, permanent (301), path and query string kept. Must stay first.
+      // /api/ is left alone on purpose: a 301 would turn a form POST into a GET, so a lead
+      // submitted from a www page that was already open when this shipped would be lost.
+      {
+        source: "/:path((?!api(?:/|$)).*)",
+        has: [{ type: "host", value: "www.innovadesignstudio.ca" }],
+        destination: "https://innovadesignstudio.ca/:path",
+        statusCode: 301,
+      },
+
       // Old duplicate/draft pages -> homepage
       { source: "/home", destination: "/", permanent: true },
       { source: "/home-2", destination: "/", permanent: true },
