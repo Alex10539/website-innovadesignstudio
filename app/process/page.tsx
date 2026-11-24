@@ -8,7 +8,9 @@ import HelpfulReading from "../components/HelpfulReading";
 import ConsultBlock from "../components/ConsultBlock";
 import ReadyChecklist from "../components/ReadyChecklist";
 import FaqSection from "../components/FaqSection";
+import VideoSpot from "../components/VideoSpot";
 import { processFaq } from "../lib/faqs";
+import { timberlinePermitVideo } from "../lib/videos";
 
 export const metadata: Metadata = {
   title: "Our Design Process | Innova Design Studio, Moncton NB",
@@ -110,6 +112,12 @@ export default function ProcessPage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-cream-100 px-6 py-20">
+        <div className="mx-auto w-full max-w-4xl">
+          <VideoSpot {...timberlinePermitVideo} />
         </div>
       </section>
 

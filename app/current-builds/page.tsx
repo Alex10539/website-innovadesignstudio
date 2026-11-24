@@ -5,6 +5,8 @@ import PageHero from "../components/PageHero";
 import ClosingCTA from "../components/ClosingCTA";
 import ProjectFeature from "../components/ProjectFeature";
 import { CALCULATOR_URL } from "../components/CalculatorCta";
+import VideoSpot from "../components/VideoSpot";
+import { timberlinePermitVideo, timberlineTrustVideo } from "../lib/videos";
 
 export const metadata: Metadata = {
   title: "Currently Building | Innova Design Studio | Atlantic Canada",
@@ -175,6 +177,10 @@ export default function CurrentBuildsPage() {
           alts={timberlineAlts}
           preview={[0, 9, 7]}
         />
+        <div className="mt-16 flex flex-col gap-16 border-t border-cream-300 pt-16">
+          <VideoSpot {...timberlinePermitVideo} />
+          <VideoSpot {...timberlineTrustVideo} flip />
+        </div>
       </section>
 
       <CtaBand heading="Want a home like this?" />
