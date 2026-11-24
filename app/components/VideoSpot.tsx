@@ -19,6 +19,8 @@ type Props = {
   transcript: string;
   /** Put the video on the right on wide screens. */
   flip?: boolean;
+  /** Small label above the heading. */
+  label?: string;
 };
 
 export default function VideoSpot({
@@ -31,6 +33,7 @@ export default function VideoSpot({
   posterPosition = "center",
   transcript,
   flip = false,
+  label = "Watch",
 }: Props) {
   const [playing, setPlaying] = useState(false);
 
@@ -83,7 +86,7 @@ export default function VideoSpot({
       </div>
 
       <div>
-        <p className="text-xs font-bold uppercase tracking-widest text-accent">Watch</p>
+        <p className="text-xs font-bold uppercase tracking-widest text-accent">{label}</p>
         <h3 className="mt-3 font-heading text-2xl font-bold">{heading}</h3>
         <p className="mt-3 max-w-xl leading-relaxed text-ink/60">{blurb}</p>
         <details className="mt-6 max-w-xl border-t border-cream-300 pt-4">

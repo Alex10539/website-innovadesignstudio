@@ -149,8 +149,12 @@ export default function CurrentBuildsPage() {
         </nav>
       </section>
 
+      <section className="mx-auto w-full max-w-5xl px-6 pt-8">
+        <VideoSpot {...timberlineTrustVideo} label="Watch · Timberline, finished" />
+      </section>
+
       <section className="mx-auto w-full max-w-5xl px-6 py-16">
-        <p className="mb-8 text-xs font-bold uppercase tracking-widest text-accent">
+        <p className="mb-8 border-t border-cream-300 pt-16 text-xs font-bold uppercase tracking-widest text-accent">
           Under construction
         </p>
         <ProjectFeature
@@ -168,6 +172,9 @@ export default function CurrentBuildsPage() {
         <p className="mb-8 border-t border-cream-300 pt-16 text-xs font-bold uppercase tracking-widest text-accent">
           Recent projects
         </p>
+        <div className="mb-16">
+          <VideoSpot {...timberlinePermitVideo} label="Watch · Timberline, finished" />
+        </div>
         <ProjectFeature
           id="timberline"
           title="Timberline hillside home"
@@ -177,10 +184,6 @@ export default function CurrentBuildsPage() {
           alts={timberlineAlts}
           preview={[0, 9, 7]}
         />
-        <div className="mt-16 flex flex-col gap-16 border-t border-cream-300 pt-16">
-          <VideoSpot {...timberlinePermitVideo} />
-          <VideoSpot {...timberlineTrustVideo} flip />
-        </div>
       </section>
 
       <CtaBand heading="Want a home like this?" />
