@@ -2,25 +2,17 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import NavDropdown from "./NavDropdown";
 import { CALCULATOR_URL } from "./CalculatorCta";
 
-const directLinks = [
+// Used by both the desktop bar and the phone menu, in this order.
+const navLinks = [
   { label: "Portfolio", href: "/portfolio" },
   { label: "Currently Building", href: "/current-builds" },
   { label: "Custom Homes", href: "/custom-homes" },
   { label: "Multi-Unit", href: "/multi-unit" },
   { label: "Renovations", href: "/renovations-additions" },
-];
-
-const resources = [
   { label: "Process", href: "/process" },
   { label: "Knowledge", href: "/knowledge" },
-];
-
-const allMobileLinks = [
-  ...directLinks,
-  ...resources,
   { label: "About", href: "/about" },
 ];
 
@@ -36,22 +28,18 @@ export default function Header() {
           Innova<span className="text-accent">.</span> Design Studio
         </a>
 
-        <nav className="hidden items-center gap-4 whitespace-nowrap text-sm text-ink xl:flex min-[1440px]:gap-5">
-          {directLinks.map((item) => (
+        <nav className="hidden items-center gap-3.5 whitespace-nowrap text-sm text-ink xl:flex min-[1440px]:gap-4 min-[1536px]:gap-5">
+          {navLinks.map((item) => (
             <a key={item.href} href={item.href} className="hover:text-accent">
               {item.label}
             </a>
           ))}
-          <NavDropdown label="Resources" items={resources} />
-          <a href="/about" className="hover:text-accent">
-            About
-          </a>
           <a href={CALCULATOR_URL} className="font-bold text-accent hover:opacity-80">
             Cost Calculator
           </a>
           <a
             href="tel:5063004380"
-            className="hidden items-center gap-1.5 text-ink/70 hover:text-ink min-[1340px]:flex"
+            className="hidden items-center gap-1.5 text-ink/70 hover:text-ink min-[1366px]:flex"
           >
             506-300-4380
           </a>
@@ -88,7 +76,7 @@ export default function Header() {
       {menuOpen && (
         <div className="border-t border-cream-300/60 px-6 py-6 xl:hidden">
           <nav className="flex flex-col gap-4 text-sm text-ink">
-            {allMobileLinks.map((item) => (
+            {navLinks.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
