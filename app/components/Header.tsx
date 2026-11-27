@@ -6,14 +6,11 @@ import NavDropdown from "./NavDropdown";
 import { CALCULATOR_URL } from "./CalculatorCta";
 
 const directLinks = [
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Currently Building", href: "/current-builds" },
   { label: "Custom Homes", href: "/custom-homes" },
   { label: "Multi-Unit", href: "/multi-unit" },
   { label: "Renovations", href: "/renovations-additions" },
-];
-
-const ourWork = [
-  { label: "Portfolio", href: "/portfolio" },
-  { label: "Currently Building", href: "/current-builds" },
 ];
 
 const resources = [
@@ -23,7 +20,6 @@ const resources = [
 
 const allMobileLinks = [
   ...directLinks,
-  ...ourWork,
   ...resources,
   { label: "About", href: "/about" },
 ];
@@ -35,18 +31,17 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-cream-300/60 bg-cream-50/95 backdrop-blur">
-      <div className="flex items-center justify-between px-6 py-4 sm:px-10">
-        <a href="/" className="font-heading text-lg font-bold text-ink">
+      <div className="flex items-center justify-between gap-4 px-6 py-4 sm:px-10 xl:px-6 min-[1440px]:px-10">
+        <a href="/" className="whitespace-nowrap font-heading text-lg font-bold text-ink">
           Innova<span className="text-accent">.</span> Design Studio
         </a>
 
-        <nav className="hidden items-center gap-5 whitespace-nowrap text-sm text-ink xl:flex">
+        <nav className="hidden items-center gap-4 whitespace-nowrap text-sm text-ink xl:flex min-[1440px]:gap-5">
           {directLinks.map((item) => (
             <a key={item.href} href={item.href} className="hover:text-accent">
               {item.label}
             </a>
           ))}
-          <NavDropdown label="Our Work" items={ourWork} />
           <NavDropdown label="Resources" items={resources} />
           <a href="/about" className="hover:text-accent">
             About
@@ -56,7 +51,7 @@ export default function Header() {
           </a>
           <a
             href="tel:5063004380"
-            className="flex items-center gap-1.5 text-ink/70 hover:text-ink"
+            className="hidden items-center gap-1.5 text-ink/70 hover:text-ink min-[1340px]:flex"
           >
             506-300-4380
           </a>
@@ -65,7 +60,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <a
             href={ctaHref}
-            className="hidden rounded-none bg-accent px-5 py-2.5 text-sm font-bold tracking-wide text-white transition-opacity hover:opacity-90 sm:inline-block"
+            className="hidden whitespace-nowrap rounded-none bg-accent px-5 py-2.5 text-sm font-bold tracking-wide text-white transition-opacity hover:opacity-90 sm:inline-block"
           >
             Book a free consult
           </a>
